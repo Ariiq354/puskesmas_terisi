@@ -25,14 +25,14 @@ export default function NavigationMenuMobile({ href, title, subMenus }: Props) {
         </Link>
       ) : (
         <div>
-          <div className="peer hover:text-blue-400 focus:text-blue-500 transition-all duration-300 flex items-center justify-between w-full border-b-2 p-2">
+          <div className="peer group hover:text-blue-400 focus:text-blue-500 transition-all duration-300 flex items-center justify-between w-full border-b-2 p-2">
             {title}
-            <FiChevronDown className="peer-hover:rotate-180 transition-transform duration-200" />
+            <FiChevronDown className="group-hover:rotate-180 transition-transform duration-200" />
           </div>
-          <div className="peer-hover:block hidden hover:block w-full bg-white rounded-md overflow-hidden shadow-md text-black ">
+          <div className="peer-hover:block hidden hover:block w-full bg-white pl-4 last:border-b-2 overflow-hidden text-black ">
             {subMenus.map((subMenu) => (
               <Link key={subMenu.key} href={subMenu.href}>
-                <div className="p-3 hover:bg-blue-100 hover:text-blue-400 transition-colors duration-200">
+                <div className="p-3 hover:text-blue-400 transition-colors duration-200">
                   {subMenu.title}
                 </div>
               </Link>
