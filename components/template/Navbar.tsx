@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -19,31 +19,31 @@ import {
 import { NavLinks } from "@/constant";
 import NavigationMenu from "./NavigationMenu";
 import NavigationMenuMobile from "./NavigationMenuMobile";
+import "./style.css";
 
 export default function Navbar() {
+  const nav = useRef<HTMLDivElement | null>(null);
+  const activeElementOnScroll = function () {
+    if (window.scrollY > 100) {
+      nav.current?.classList.add("active");
+      nav.current?.classList.remove("hidden");
+    } else {
+      nav.current?.classList.remove("active");
+      nav.current?.classList.add("hidden");
+    }
+  };
+
+  window.addEventListener("scroll", activeElementOnScroll);
+
   return (
-    <>
-      <div className="container py-2 md:flex justify-between border-b-2 hidden">
-        <div className="flex gap-2 items-center">
-          <FaLocationDot /> Jln. Raya Rajasinga, Terisi
-          <AiOutlineMail className="ml-2" /> puskesmas_terisi@yahoo.com
-        </div>
-        <div className="flex gap-6">
-          <Link href="https://www.facebook.com/Gesit351" target="_blank">
-            <BsFacebook size={20} color="#3b5998" />
-          </Link>
-          <Link
-            href="https://www.youtube.com/channel/UCpn_z6J4N-XLwM3cjCgEjyQ"
-            target="_blank"
-          >
-            <BsYoutube size={20} color="#c4302b" />
-          </Link>
-        </div>
-      </div>
-      <div className="sticky top-0 py-6 shadow-lg bg-white">
-        <div className="container flex">
+    <div className="bg-teal-800">
+      <div
+        ref={nav}
+        className="py-6 hidden text-white font-bold tracking-widest z-10"
+      >
+        <div className="flex container">
           <Image src="/logo.png" width={60} height={60} alt="logo" />
-          <div className="w-full items-center justify-center md:flex hidden">
+          <div className="w-full items-center justify-center lg:flex hidden">
             <div className="flex gap-12 text-md items h-full">
               {NavLinks.map((link) =>
                 link.subMenus ? (
@@ -63,7 +63,7 @@ export default function Navbar() {
               )}
             </div>
           </div>
-          <div className="w-full items-center justify-end md:hidden flex">
+          <div className="w-full items-center justify-end lg:hidden flex">
             <Sheet>
               <SheetTrigger>
                 <AiOutlineMenu size={30} />
@@ -93,6 +93,59 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-    </>
+      <div className="py-6 text-white font-bold tracking-widest">
+        <div className="flex container">
+          <Image src="/logo.png" width={60} height={60} alt="logo" />
+          <div className="w-full items-center justify-center lg:flex hidden">
+            <div className="flex gap-12 text-md items h-full">
+              {NavLinks.map((link) =>
+                link.subMenus ? (
+                  <NavigationMenu
+                    key={link.key}
+                    title={link.title}
+                    href={link.href}
+                    subMenus={link.subMenus}
+                  />
+                ) : (
+                  <NavigationMenu
+                    key={link.key}
+                    title={link.title}
+                    href={link.href}
+                  />
+                )
+              )}
+            </div>
+          </div>
+          <div className="w-full items-center justify-end lg:hidden flex">
+            <Sheet>
+              <SheetTrigger>
+                <AiOutlineMenu size={30} />
+              </SheetTrigger>
+              <SheetContent>
+                <SheetHeader>
+                  <SheetTitle>Menu</SheetTitle>
+                </SheetHeader>
+                {NavLinks.map((link) =>
+                  link.subMenus ? (
+                    <NavigationMenuMobile
+                      key={link.key}
+                      title={link.title}
+                      href={link.href}
+                      subMenus={link.subMenus}
+                    />
+                  ) : (
+                    <NavigationMenuMobile
+                      key={link.key}
+                      title={link.title}
+                      href={link.href}
+                    />
+                  )
+                )}
+              </SheetContent>
+            </Sheet>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

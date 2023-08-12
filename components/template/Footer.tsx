@@ -20,25 +20,6 @@ import { MdGirl } from "react-icons/md";
 export default function Footer() {
   return (
     <footer className="bg-slate-300">
-      {/* <div className="container flex gap-4 flex-1">
-        <div className="flex flex-col">
-          <Image src="/logo.png" width={50} height={50} alt="logo" />
-          <div>UPTD PUSKESMAS TERISI</div>
-          <div>
-            Jln. Raya Rajasinga No. 72B Kecamatan Terisi, Indramayu, Indonesia,
-            West Java
-          </div>
-        </div>
-        <div className="flex flex-col">
-          <div>Jam Pelayanan</div>
-          <div>
-            Senin - Sabtu: <br /> 7.30 - 14.30
-          </div>
-          Hotline Puskesmas
-        </div>
-        <div></div>
-        <div></div>
-      </div> */}
       <div className="container grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4 py-8 border-b-2">
         <div className="flex flex-col gap-4">
           <div className="flex justify-center">
