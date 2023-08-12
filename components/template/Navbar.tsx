@@ -44,7 +44,7 @@ export default function Navbar() {
         <div className="container flex">
           <Image src="/logo.png" width={60} height={60} alt="logo" />
           <div className="w-full items-center justify-center md:flex hidden">
-            <div className="flex gap-12 text-lg h-full">
+            <div className="flex gap-12 text-md items h-full">
               {NavLinks.map((link) =>
                 link.subMenus ? (
                   <NavigationMenu

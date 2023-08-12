@@ -1,5 +1,5 @@
 import Image from "next/image";
 
 export default function Home() {
-  return <div>Halo</div>;
+  return <div className="h-[140vh]">Halo</div>;
 }

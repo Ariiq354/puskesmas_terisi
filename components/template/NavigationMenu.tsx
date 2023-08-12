@@ -1,6 +1,7 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 interface subMenus {
   href: string;
@@ -15,6 +16,12 @@ interface Props {
 }
 
 export default function NavigationMenu({ href, title, subMenus }: Props) {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleHover = () => {
+    setIsHovered(!isHovered);
+  };
+
   return (
     <>
       {!subMenus ? (
@@ -24,10 +31,21 @@ export default function NavigationMenu({ href, title, subMenus }: Props) {
           </div>
         </Link>
       ) : (
-        <div className="group hover:text-blue-400 transition-all duration-300 flex items-center gap-1 relative">
+        <div
+          className="group hover:text-blue-400 transition-all duration-300 flex items-center gap-1 relative"
+          onMouseEnter={handleHover}
+          onMouseLeave={handleHover}
+        >
           {title}
           <FiChevronDown className="group-hover:rotate-180 transition-transform duration-200" />
-          <div className="group-hover:opacity-100 opacity-0 transition-opacity duration-300 absolute top-[3.75rem] w-56 bg-white rounded-md overflow-hidden shadow-md text-black ">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: isHovered ? 1 : 0,
+            }}
+            transition={{ duration: 0.3 }}
+            className="group-hover:block hidden absolute top-[3.75rem] w-56 bg-white rounded-md overflow-hidden shadow-md text-black "
+          >
             {subMenus.map((subMenu) => (
               <Link key={subMenu.key} href={subMenu.href}>
                 <div className="p-3 hover:bg-blue-100 hover:text-blue-400 transition-colors duration-200">
@@ -35,7 +53,7 @@ export default function NavigationMenu({ href, title, subMenus }: Props) {
                 </div>
               </Link>
             ))}
-          </div>
+          </motion.div>
         </div>
       )}
     </>
