@@ -11,7 +11,6 @@ import { BsFacebook, BsYoutube } from "react-icons/bs";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -24,7 +23,7 @@ import NavigationMenuMobile from "./NavigationMenuMobile";
 export default function Navbar() {
   return (
     <>
-      <div className="container py-2 flex justify-between border-b-2">
+      <div className="container py-2 md:flex justify-between border-b-2 hidden">
         <div className="flex gap-2 items-center">
           <FaLocationDot /> Jln. Raya Rajasinga, Terisi
           <AiOutlineMail className="ml-2" /> puskesmas_terisi@yahoo.com
@@ -41,7 +40,7 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
-      <div className="sticky top-0 py-6 shadow-lg">
+      <div className="sticky top-0 py-6 shadow-lg bg-white">
         <div className="container flex">
           <Image src="/logo.png" width={60} height={60} alt="logo" />
           <div className="w-full items-center justify-center md:flex hidden">
