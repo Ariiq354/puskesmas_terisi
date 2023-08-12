@@ -1,13 +1,10 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
-import Link from "next/link";
 import Image from "next/image";
 
-import { FaLocationDot } from "react-icons/fa6";
-import { AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
-import { BsFacebook, BsYoutube } from "react-icons/bs";
+import { AiOutlineMenu } from "react-icons/ai";
 import {
   Sheet,
   SheetContent,
@@ -23,17 +20,24 @@ import "./style.css";
 
 export default function Navbar() {
   const nav = useRef<HTMLDivElement | null>(null);
-  const activeElementOnScroll = function () {
-    if (window.scrollY > 100) {
-      nav.current?.classList.add("active");
-      nav.current?.classList.remove("hidden");
-    } else {
-      nav.current?.classList.remove("active");
-      nav.current?.classList.add("hidden");
-    }
-  };
 
-  window.addEventListener("scroll", activeElementOnScroll);
+  useEffect(() => {
+    const activeElementOnScroll = function () {
+      if (window.scrollY > 100) {
+        nav.current?.classList.add("active");
+        nav.current?.classList.remove("hidden");
+      } else {
+        nav.current?.classList.remove("active");
+        nav.current?.classList.add("hidden");
+      }
+    };
+
+    window.addEventListener("scroll", activeElementOnScroll);
+
+    return () => {
+      window.removeEventListener("scroll", activeElementOnScroll);
+    };
+  }, []);
 
   return (
     <div className="bg-teal-800">
