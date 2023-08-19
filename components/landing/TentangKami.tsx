@@ -19,11 +19,11 @@ export default function TentangKami() {
         </div>
         <div>
           <Link href="/profil">
-            <Button className="flex group text-teal-700 border-[3px] py-5 px-2 font-bold border-teal-700 hover:bg-teal-700 hover:text-white transition-all duration-300">
+            <Button className="flex group text-emerald-700 border-[3px] py-5 px-2 font-bold border-emerald-700 hover:bg-emerald-700 hover:text-white transition-all duration-300">
               Selengkapnya
               <BiChevronRight
                 size={30}
-                className="text-white bg-teal-700 rounded-sm ml-2 group-hover:ml-4 transition-all duration-300 group-hover:bg-white group-hover:text-teal-700"
+                className="text-white bg-emerald-700 rounded-sm ml-2 group-hover:ml-4 transition-all duration-300 group-hover:bg-white group-hover:text-emerald-700"
               />
             </Button>
           </Link>

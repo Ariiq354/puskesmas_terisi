@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="h-[50rem] bg-[url('/hero-bg.png')] bg-teal-800 bg-no-repeat bg-cover flex items-center text-white mb-[-5rem]">
+    <div className="h-[50rem] bg-[url('/hero-bg.png')] bg-emerald-700 bg-no-repeat bg-cover flex items-center text-white mb-[-5rem]">
       <div className="container grid md:grid-cols-2 grid-cols-1 items-center">
         <div className="flex flex-col gap-4">
           <div className="before relative pl-20 text-lg">Selamat Datang di</div>

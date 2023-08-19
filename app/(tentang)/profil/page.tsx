@@ -4,13 +4,13 @@ import React from "react";
 export default function Profil() {
   return (
     <>
-      <div className="h-[15rem] w-full bg-[url('/hero-bg.png')] bg-teal-800 bg-no-repeat bg-cover bg-center flex justify-center items-end text-white font-bold text-6xl pb-4">
+      <div className="h-[15rem] w-full bg-[url('/hero-bg.png')] bg-emerald-900 bg-no-repeat bg-cover bg-center flex justify-center items-end text-white font-bold text-6xl pb-4">
         Profil Puskesmas
       </div>
       <div className="flex justify-center my-10">
         <Image alt="" src="/gambar.jpeg" width={1000} height={1000}></Image>
       </div>
-      <div className="bg-teal-200 w-full text-teal-900 ">
+      <div className="bg-emerald-200 w-full text-emerald-900 ">
         <div className="container grid md:grid-cols-2 grid-cols-1 items-center py-10">
           <div className="flex flex-col items-center px-10 gap-2">
             <div className="text-6xl font-bold">Visi</div>
@@ -65,7 +65,7 @@ export default function Profil() {
         <Image alt="" src="/tatanilai.png" width={1500} height={1500}></Image>
       </div>
       <div className="grid md:grid-cols-2 grid-cols-1 p-10">
-        <div className="md:col-span-2 col-span-1 text-teal-900 text-5xl flex justify-center p-4 bg-teal-200 my-10">
+        <div className="md:col-span-2 col-span-1 text-emerald-900 text-5xl flex justify-center p-4 bg-emerald-200 my-10">
           Wilayah Kerja
         </div>
         <div className="flex justify-center">
@@ -109,7 +109,7 @@ export default function Profil() {
         </div>
       </div>
       <div className="flex flex-col p-10">
-        <div className="md:col-span-2 col-span-1 text-teal-900 text-5xl flex justify-center p-4 bg-teal-200 my-10">
+        <div className="md:col-span-2 col-span-1 text-emerald-900 text-5xl flex justify-center p-4 bg-emerald-200 my-10">
           Struktur Organisasi
         </div>
         <div className="flex justify-center">

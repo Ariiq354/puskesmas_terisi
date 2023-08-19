@@ -26,13 +26,13 @@ export default function NavigationMenu({ href, title, subMenus }: Props) {
     <>
       {!subMenus ? (
         <Link href={href!} className="flex items-center">
-          <div className="hover:text-blue-400 transition-all duration-300">
+          <div className="hover:text-emerald-300 transition-all duration-300">
             {title}
           </div>
         </Link>
       ) : (
         <div
-          className="group hover:text-blue-400 transition-all duration-300 flex items-center gap-1 relative"
+          className="group hover:text-emerald-300 transition-all duration-300 flex items-center gap-1 relative"
           onMouseEnter={handleHover}
           onMouseLeave={handleHover}
         >
@@ -44,11 +44,11 @@ export default function NavigationMenu({ href, title, subMenus }: Props) {
               opacity: isHovered ? 1 : 0,
             }}
             transition={{ duration: 0.3 }}
-            className="group-hover:block hidden absolute top-[3.75rem] w-56 bg-white rounded-md overflow-hidden shadow-md text-black "
+            className="group-hover:block hidden absolute top-[3.75rem] w-56 bg-white rounded-md overflow-hidden shadow-md text-green-900 "
           >
             {subMenus.map((subMenu) => (
               <Link key={subMenu.key} href={subMenu.href}>
-                <div className="p-3 hover:bg-blue-100 hover:text-blue-400 transition-colors duration-200">
+                <div className="p-3 hover:bg-emerald-100 hover:text-emerald-900 transition-colors duration-200">
                   {subMenu.title}
                 </div>
               </Link>
