@@ -1,21 +1,10 @@
 import Image from "next/image";
 
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaPhone,
-  FaLocationDot,
-  FaRegUser,
-  FaTooth,
-  FaBaby,
-  FaLungsVirus,
-  FaSyringe,
-  FaStethoscope,
-  FaUserNurse,
-} from "react-icons/fa6";
-import { FaAmbulance } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLocationDot } from "react-icons/fa6";
+import { BiSolidPhoneCall } from "react-icons/bi";
 import { GrMail } from "react-icons/gr";
-import { MdGirl } from "react-icons/md";
+
+import { pelayanan } from "@/constant";
 
 export default function Footer() {
   return (
@@ -27,57 +16,31 @@ export default function Footer() {
           </div>
           <div className="font-bold text-center">UPTD PUSKESMAS TERISI</div>
           <div className="text-justify text-slate-500">
-            Jln. Raya Rajasinga No. 72B Kecamatan Terisi, Indramayu, Indonesia,
-            West Java
+            Jln. Raya Rajasinga No. 72B Kecamatan Terisi, Kabupaten Indramayu,
+            Kode Pos 45262
           </div>
         </div>
         <div className="flex flex-col gap-5">
           <div className="font-bold text-2xl">Pelayanan</div>
           <div className="text-slate-500 flex flex-col gap-3">
-            <div className="flex gap-2 items-center">
-              <FaRegUser />
-              Umum
-            </div>
-            <div className="flex gap-2 items-center">
-              <FaTooth />
-              Kesehatan Gigi dan Mulut
-            </div>
-            <div className="flex gap-2 items-center">
-              <MdGirl />
-              Kesehatan Ibu dan Anak
-            </div>
-            <div className="flex gap-2 items-center">
-              <FaBaby />
-              Manajemen Terpadu Balita Sakit (MTBS)
-            </div>
-            <div className="flex gap-2 items-center">
-              <FaAmbulance />
-              Gawat Darurat
-            </div>
-            <div className="flex gap-2 items-center">
-              <FaLungsVirus />
-              Pemeriksaan TBC
-            </div>
-            <div className="flex gap-2 items-center">
-              <FaSyringe />
-              Vaksinasi
-            </div>
-            <div className="flex gap-2 items-center">
-              <FaStethoscope />
-              Laboratorium
-            </div>
-            <div className="flex gap-2 items-center">
-              <FaUserNurse />
-              Komunikasi Informasi & Edukasi
-            </div>
+            {pelayanan.map((pel, index) => (
+              <div key={index} className="flex gap-2 items-center">
+                {pel.icon}
+                {pel.name}
+              </div>
+            ))}
           </div>
         </div>
         <div className="flex flex-col gap-5">
           <div className="font-bold text-2xl">Info Kontak</div>
           <div className="text-slate-500 flex flex-col gap-3">
             <div className="flex gap-2 items-center">
-              <FaPhone />
-              (0234) 7145147
+              <BiSolidPhoneCall />
+              Telp. (0234) 7145147
+            </div>
+            <div className="flex gap-2 items-center">
+              <BiSolidPhoneCall />
+              Call Center: 085171110351
             </div>
             <div className="flex gap-2 items-center">
               <GrMail />
@@ -104,7 +67,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="container p-8">
-        Copyright © 2023 UPTD Puskesmas Babakan Sari | All Rights Reserved.
+        Copyright © 2023 UPTD Puskesmas Terisi | All Rights Reserved.
       </div>
     </footer>
   );

@@ -15,7 +15,7 @@ export default function Hero() {
             temporibus earum laudantium quibusdam!
           </div>
         </div>
-        <div>
+        <div className="md:block hidden">
           <Image src="/home-img.svg" width={2500} height={2500} alt=""></Image>
         </div>
       </div>
