@@ -32,7 +32,7 @@ export default function NavigationMenu({ href, title, subMenus }: Props) {
         </Link>
       ) : (
         <div
-          className="group hover:text-emerald-300 transition-all duration-300 flex items-center gap-1 relative"
+          className="group hover:text-emerald-300 transition-all duration-300 flex items-center gap-1 relative cursor-pointer"
           onMouseEnter={handleHover}
           onMouseLeave={handleHover}
         >
