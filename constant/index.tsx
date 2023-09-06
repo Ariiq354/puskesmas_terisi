@@ -10,6 +10,7 @@ import {
   FaBed,
   FaUserMd,
   FaHome,
+  FaShieldVirus,
 } from "react-icons/fa";
 import { TbBabyCarriage } from "react-icons/tb";
 import { GrBaby } from "react-icons/gr";
@@ -47,19 +48,6 @@ export const NavLinks = [
     ],
   },
   {
-    key: "Data",
-    title: "Data",
-    subMenus: [
-      { href: "/program", key: "Laporan Program", title: "Laporan Program" },
-      {
-        href: "/faskes",
-        key: "Laporan Faskes Jejaring",
-        title: "Laporan Faskes Jejaring",
-      },
-      { href: "/capaian", key: "Capaian Program", title: "Capaian Program" },
-    ],
-  },
-  {
     key: "Survei",
     title: "Survei",
     subMenus: [
@@ -82,37 +70,37 @@ export const pelayanan = [
   {
     name: "Klinik Umum",
     icon: <BiClinic></BiClinic>,
-    jadwal: "Senin - Selasa",
+    jadwal: "Senin - Sabtu",
   },
   {
     name: "Pelayanan Kesehatan Lansia",
     icon: <MdElderly></MdElderly>,
-    jadwal: "Senin - Selasa",
+    jadwal: "Senin - Sabtu",
   },
   {
     name: "Kesehatan Gigi dan Mulut",
     icon: <FaTooth></FaTooth>,
-    jadwal: "Senin - Selasa",
+    jadwal: "Senin, Rabu, Jumat",
   },
   {
     name: "Pelayanan Kesehatan Peduli Remaja (PKPR)",
     icon: <FaPeopleCarry></FaPeopleCarry>,
-    jadwal: "Senin - Selasa",
+    jadwal: "Senin - Sabtu",
   },
   {
     name: "Manajemen Terpadu Balita Sakit",
     icon: <FaBaby></FaBaby>,
-    jadwal: "Senin - Selasa",
+    jadwal: "Senin - Sabtu",
   },
   {
     name: "Kesehatan Ibu dan Anak (KIA) dan KB",
     icon: <MdFamilyRestroom></MdFamilyRestroom>,
-    jadwal: "Senin - Selasa",
+    jadwal: "Senin, Rabu, Jumat, Sabtu",
   },
   {
     name: "Pelayanan USG",
     icon: <BsSoundwave></BsSoundwave>,
-    jadwal: "Senin - Selasa",
+    jadwal: "Kamis & Sabtu",
   },
   {
     name: "Poli DOTS TBC",
@@ -127,17 +115,17 @@ export const pelayanan = [
   {
     name: "Laboratorium",
     icon: <BiSolidReport></BiSolidReport>,
-    jadwal: "Senin - Selasa",
+    jadwal: "Senin, Selasa, Rabu, Jumat, Sabtu",
   },
   {
-    name: "Gawat Darurat 24 Jam",
+    name: "Gawat Darurat",
     icon: <FaAmbulance></FaAmbulance>,
-    jadwal: "Senin - Selasa",
+    jadwal: "24 Jam",
   },
   {
-    name: "Persalinan (PONED) 24 Jam",
+    name: "Persalinan (PONED)",
     icon: <TbBabyCarriage></TbBabyCarriage>,
-    jadwal: "Senin - Selasa",
+    jadwal: "24 Jam",
   },
   {
     name: "Rawat Inap",
@@ -147,11 +135,16 @@ export const pelayanan = [
   {
     name: "Konseling",
     icon: <FaUserMd></FaUserMd>,
-    jadwal: "Senin - Selasa",
+    jadwal: "Senin - Sabtu",
   },
   {
     name: "Dokmaru (Dokter Masuk Rumah)",
     icon: <FaHome></FaHome>,
+    jadwal: "Senin - Selasa",
+  },
+  {
+    name: "PDP HIV AIDS",
+    icon: <FaShieldVirus></FaShieldVirus>,
     jadwal: "Senin - Selasa",
   },
 ];

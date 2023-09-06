@@ -12,10 +12,16 @@ export default function TentangKami() {
         <div className="text-lg">Tentang Kami</div>
         <div className="text-4xl">UPTD Puskesmas Terisi</div>
         <div className="text-xl text-justify">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab vero
-          obcaecati at itaque voluptatum enim commodi. Provident eum nostrum
-          nulla neque. Incidunt ducimus laboriosam voluptatibus expedita,
-          temporibus earum laudantium quibusdam!
+          UPTD PUSKESMAS TERISI adalah Unit Pelaksana Teknis Dinas Kesehatan
+          Kabupaten Indramayu yang bertempat di Kecamatan Terisi dengan wilayah
+          kerja meliputi 9 desa yaitu desa Cikawung, desa Jatimunggul,
+          Jatimulya, Rajasinga, Plosokerep, Cibereng, Kendayakan, Manggungan dan
+          desa Karangasem. Pelayanan yang dibèrikan oleh kami adalah pelayanan
+          dalam gedung: Pelayanan Rawat Jalan, Poned 24 jam, Rawat Inap, UGD 24
+          jam (Upaya Kesehatan Perorangan -UKP- ) dan Pelayanan Luar Gedung
+          (Upaya Kesehatan Masyarakat -UKM- ) yang didukung oleh aparatur
+          kewilayahan setempat. Kami selalu berupaya memberikan pelayanan prima
+          dengan sepenuh hati bagi para pengguna layanan kami.
         </div>
         <div>
           <Link href="/profil">

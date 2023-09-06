@@ -8,11 +8,14 @@ export default function Hero() {
         <div className="flex flex-col gap-4">
           <div className="before relative pl-20 text-lg">Selamat Datang di</div>
           <div className="text-6xl">UPTD Puskesmas Terisi</div>
-          <div className="text-xl text-justify">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab vero
-            obcaecati at itaque voluptatum enim commodi. Provident eum nostrum
-            nulla neque. Incidunt ducimus laboriosam voluptatibus expedita,
-            temporibus earum laudantium quibusdam!
+          <div className="text-2xl text-justify">
+            Portal informasi, Data, Edukasi dan Umpan balik Terisi
+          </div>
+          <div>
+            Jam Pelayanan :<br />
+            Senin s/d Kamis : 7.30 - 13.30 <br />
+            Jum&apos;at : 7.30 - 11.00 <br />
+            Sabtu : 7.30 - 11.30
           </div>
         </div>
         <div className="md:block hidden">
