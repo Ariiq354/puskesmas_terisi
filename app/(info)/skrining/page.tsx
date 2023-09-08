@@ -6,7 +6,7 @@ import { BsWhatsapp } from "react-icons/bs";
 export default function Skrining() {
   return (
     <>
-      <div className="h-[15rem] w-full bg-[url('/hero-bg.png')] bg-teal-800 bg-no-repeat bg-cover bg-center flex justify-center items-center text-white font-bold text-6xl text-center">
+      <div className="h-[15rem] w-full bg-[url('/hero-bg.png')] bg-teal-800 bg-no-repeat bg-cover bg-center flex justify-center items-center text-white font-bold text-4xl md:text-6xl text-center">
         Skrining Kesehatan Jiwa
       </div>
       <div className="container flex flex-col items-center  py-20">
@@ -37,7 +37,21 @@ export default function Skrining() {
           </Button>
         </div>
       </div>
-      <div className="container py-20 w-full bg-teal-800 h-[20rem] sm:h-[15rem] text-white text-[1.3rem] text-justify justify-center md:items-center flex flex-col xl:flex-row">
+      <div className="py-20 w-full bg-teal-800 h-[20rem] sm:h-[15rem] text-white text-[1.3rem] text-justify justify-center items-center flex flex-col xl:flex-row">
+        <div className="container w-full bg-teal-800 h-[20rem] sm:h-[15rem] text-white text-[1.3rem] text-justify justify-center lg:items-center flex flex-col xl:flex-row">
+          <p>
+            Anda juga dapat berkonsultasi dengan petugas kesehatan jiwa kami
+            melalui nomor hotline berikut ini
+          </p>
+          <a href="https://api.whatsapp.com/send/?phone=6285171110351&text&type=phone_number&app_absent=0">
+            <Button className="flex group text-white py-5 px-2 font-bold bg-green-500 hover:bg-white hover:text-emerald-700 transition-all duration-300 px-4 lg:ml-4 mt-4 xl:mt-0">
+              <BsWhatsapp className="mr-2" />
+              +62 851-7111-0351
+            </Button>
+          </a>
+        </div>
+      </div>
+      {/* <div className="container py-20 w-full bg-teal-800 h-[20rem] sm:h-[15rem] text-white text-[1.3rem] text-justify justify-center items-center flex flex-col xl:flex-row">
         <p>
           Anda juga dapat berkonsultasi dengan petugas kesehatan jiwa kami
           melalui nomor hotline berikut ini
@@ -48,7 +62,7 @@ export default function Skrining() {
             +62 851-7111-0351
           </Button>
         </a>
-      </div>
+      </div> */}
     </>
   );
 }
