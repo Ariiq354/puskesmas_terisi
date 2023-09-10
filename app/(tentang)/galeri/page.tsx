@@ -16,9 +16,11 @@ interface galeri {
 export default function Galeri() {
   const [items, setItems] = useState<galeri[]>();
 
-  axios.get("/api/galeri").then((res) => {
-    setItems(res.data);
-  });
+  useEffect(() => {
+    axios.get("/api/galeri").then((res) => {
+      setItems(res.data);
+    });
+  }, []);
 
   return (
     <>
