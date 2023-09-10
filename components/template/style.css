@@ -1,7 +1,7 @@
 .active {
   position: fixed;
   width: 100%;
-  background-color: hsl(164.20000000000005, 85.7%, 16.5%);
+  background-color: #047857;
   animation: headerActive 0.5s ease forwards;
 }
 

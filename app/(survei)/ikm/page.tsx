@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { BiChevronRight } from "react-icons/bi";
+import Link from "next/link";
 
 export default function Ikm() {
     return (
@@ -22,13 +23,15 @@ export default function Ikm() {
                         Silahkan mengisi formulir survei dengan mengklik tautan yang telah disediakan. Terima kasih.
                     </p>
                     <div className="flex w-full mt-2">
-                        <Button className="flex group text-emerald-700 border-[3px] py-5 px-2 font-bold border-emerald-700 hover:bg-emerald-700 hover:text-white transition-all duration-300">
-                            Survei IKM Puskesmas Terisi
-                            <BiChevronRight
-                                size={30}
-                                className="text-white bg-emerald-700 rounded-sm ml-2 group-hover:ml-4 transition-all duration-300 group-hover:bg-white group-hover:text-emerald-700"
-                            />
-                        </Button>
+                        <Link href={"https://bit.ly/KuesionerSKM-IM"}>
+                            <Button className="flex group text-emerald-700 border-[3px] py-5 px-2 font-bold border-emerald-700 hover:bg-emerald-700 hover:text-white transition-all duration-300">
+                                Survei IKM Puskesmas Terisi
+                                <BiChevronRight
+                                    size={30}
+                                    className="text-white bg-emerald-700 rounded-sm ml-2 group-hover:ml-4 transition-all duration-300 group-hover:bg-white group-hover:text-emerald-700"
+                                />
+                            </Button>
+                        </Link>
                     </div>
                 </div>
             </div>

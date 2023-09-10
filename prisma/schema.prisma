@@ -11,10 +11,13 @@ datasource db {
   relationMode = "prisma"
 }
 
-model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
+model tb_galeri {
+  id         Int      @id @default(autoincrement())
+  code       String
+  name       String
+  type       Int
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
 }
 
 model tb_berita_artikel {
