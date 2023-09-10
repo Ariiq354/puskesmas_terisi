@@ -136,7 +136,7 @@ const recentArtikel = dataArtikel.slice(0, 3);
        />
        <div className="flex flex-col justify-between p-4 leading-normal">
          <h5 className="mb-2 lg:text-base text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{item.nama}</h5>
-         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{item.deskripsi}</p>
+         <p className="mb-3 font-normal lg:text-xs text-gray-700 dark:text-gray-400">{item.deskripsi}</p>
        </div>
       
     
@@ -165,7 +165,7 @@ const recentArtikel = dataArtikel.slice(0, 3);
         />
         <div className="flex flex-col justify-between p-4 leading-normal">
           <h5 className="mb-2 lg:text-base text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{item.nama}</h5>
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{item.deskripsi}</p>
+          <p className="mb-3 font-normal lg:text-xs text-gray-700 dark:text-gray-400">{item.deskripsi}</p>
         </div>
        
      
