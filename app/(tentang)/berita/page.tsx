@@ -144,7 +144,6 @@ export default async function Berita() {
             </div>
             {/* Add your list of latest news items here */}
             <div className="flex flex-wrap justify-center">
-              {" "}
               {/* Center the cards */}
               {recentArtikel.map((item) => (
                 <Link
