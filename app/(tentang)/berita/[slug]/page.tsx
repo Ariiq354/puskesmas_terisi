@@ -1,11 +1,30 @@
-import prisma from "@/lib/prisma";
-import Image from "next/image";
-import NewsContent from "@/components/newsContent";
+"use client";
 
-export default async function Page({ params }: { params: { slug: string } }) {
-  const data = await prisma.tb_berita_artikel.findMany({
-    where: { id_berita: parseInt(params.slug) },
-  });
+import React, { useEffect, useState } from "react";
+import { CldImage } from "next-cloudinary";
+import NewsContent from "@/components/newsContent";
+import axios from "axios";
+
+interface berita {
+  id_berita: number;
+  nama: string;
+  path_image: string;
+  penulis: string;
+  kategori: number;
+  deskripsi: string;
+  konten: string;
+  created_at: Date;
+  updated_at: Date;
+}
+
+export default function Page({ params }: { params: { slug: string } }) {
+  const [dataBerita, setDataBerita] = useState<berita[]>();
+
+  useEffect(() => {
+    axios.get(`/api/berita/${params.slug}`).then((res) => {
+      setDataBerita(res.data);
+    });
+  }, [params.slug]);
 
   function formatDateToDDMMYYYY(dateString: string | number | Date) {
     const date = new Date(dateString);
@@ -17,7 +36,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   return (
     <div>
-      {data.map((item) => (
+      {dataBerita?.map((item) => (
         <div key={item.id_berita} className="container">
           <div className="overflow-hidden lg:px-40 py-10">
             {/* Title */}
@@ -31,9 +50,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
             </div>
 
             {/* Image */}
-            <Image
+            <CldImage
               width={2000}
-              height={2000  }
+              height={2000}
               src={item.path_image}
               alt="News"
               className="w-full object-cover"

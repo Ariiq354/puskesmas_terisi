@@ -1,16 +1,35 @@
-import React from "react";
-import prisma from "@/lib/prisma";
-import Image from "next/image";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { CldImage } from "next-cloudinary";
+import axios from "axios";
 
-export default async function Artikel() {
-  const dataBerita = await prisma.tb_berita_artikel.findMany({
-    where: { kategori: 0 },
-  });
+interface berita {
+  id_berita: number;
+  nama: string;
+  path_image: string;
+  penulis: string;
+  kategori: number;
+  deskripsi: string;
+  konten: string;
+  created_at: Date;
+  updated_at: Date;
+}
 
-  const dataArtikel = await prisma.tb_berita_artikel.findMany({
-    where: { kategori: 1 },
-  });
+export default function Artikel() {
+  const [dataBerita, setDataBerita] = useState<berita[]>();
+  const [dataArtikel, setDataArtikel] = useState<berita[]>();
+
+  useEffect(() => {
+    axios.get("/api/berita").then((res) => {
+      setDataBerita(res.data);
+    });
+
+    axios.get("/api/artikel").then((res) => {
+      setDataArtikel(res.data);
+    });
+  }, []);
 
   function formatDateToDDMMYYYY(dateString: string | number | Date) {
     const date = new Date(dateString);
@@ -21,7 +40,7 @@ export default async function Artikel() {
   }
 
   // Sort the dataBerita array by the 'created_at' date in descending order (most recent first)
-  dataBerita.sort((a, b) => {
+  dataBerita?.sort((a, b) => {
     const dateA = new Date(a.created_at);
     const dateB = new Date(b.created_at);
 
@@ -35,10 +54,10 @@ export default async function Artikel() {
   });
 
   // Slice the first 3 items to get the most recent ones
-  const recentBerita = dataBerita.slice(0, 3);
+  const recentBerita = dataBerita?.slice(0, 3);
 
   // Sort the dataBerita array by the 'created_at' date in descending order (most recent first)
-  dataArtikel.sort((a, b) => {
+  dataArtikel?.sort((a, b) => {
     const dateA = new Date(a.created_at);
     const dateB = new Date(b.created_at);
 
@@ -52,7 +71,7 @@ export default async function Artikel() {
   });
 
   // Slice the first 3 items to get the most recent ones
-  const recentArtikel = dataArtikel.slice(0, 3);
+  const recentArtikel = dataArtikel?.slice(0, 3);
 
   return (
     <>
@@ -67,18 +86,17 @@ export default async function Artikel() {
             <div className="grid gap-6 lg:grid-cols-3 xl:gap-x-12">
               {/* Your existing main news list code */}
 
-              {dataArtikel.map((item) => (
+              {dataArtikel?.map((item) => (
                 <div key={item.id_berita} className="mb-6">
                   <div className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
                     <div className="flex">
                       <div className="mx-4 -mt-4 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20">
-                        <Image
+                        <CldImage
                           src={item.path_image}
-                          width={2000}
-                          height={2000}
+                          width={500}
+                          height={500}
                           className="w-full"
-                          alt={`Image for ${item.nama}`}
-                          // Make sure to provide alt text for accessibility
+                          alt=""
                         />
                       </div>
                     </div>
@@ -112,19 +130,21 @@ export default async function Artikel() {
             </div>
             <div className="flex flex-wrap justify-center">
               {/* Add your list of latest news items here */}
-              {recentBerita.map((item) => (
+              {recentBerita?.map((item) => (
                 <Link
                   href={`/berita/${item.id_berita}`}
                   key={item.id_berita}
                   className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 mb-8 mx-4"
                 >
-                  <Image
-                    src={item.path_image}
-                    width={1000}
-                    height={1000}
-                    className="object-cover w-full px-3 py-3  rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-                    alt={`Image for ${item.nama}`}
-                  />
+                  <div>
+                    <CldImage
+                      src={item.path_image}
+                      width={250}
+                      height={250}
+                      className="w-full"
+                      alt=""
+                    />
+                  </div>
                   <div className="flex flex-col justify-between p-4 leading-normal">
                     <h5 className="mb-2 lg:text-base text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                       {item.nama}
@@ -146,19 +166,21 @@ export default async function Artikel() {
             <div className="flex flex-wrap justify-center">
               {" "}
               {/* Center the cards */}
-              {recentArtikel.map((item) => (
+              {recentArtikel?.map((item) => (
                 <Link
                   href={`/berita/${item.id_berita}`}
                   key={item.id_berita}
                   className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 mb-8 mx-4"
                 >
-                  <Image
-                    src={item.path_image}
-                    width={1000}
-                    height={1000}
-                    className="object-cover w-full px-3 py-3  rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-                    alt={`Image for ${item.nama}`}
-                  />
+                  <div>
+                    <CldImage
+                      src={item.path_image}
+                      width={500}
+                      height={500}
+                      className="w-full"
+                      alt=""
+                    />
+                  </div>
                   <div className="flex flex-col justify-between p-4 leading-normal">
                     <h5 className="mb-2 lg:text-base text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                       {item.nama}
