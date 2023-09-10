@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 
 
-export default async function Artikel() {
+export default async function Berita() {
   const dataBerita = await prisma.tb_berita_artikel.findMany({
     where: { kategori: 0 },
   });
@@ -64,7 +64,7 @@ const recentArtikel = dataArtikel.slice(0, 3);
   return (
     <>
      <div className="h-[15rem] w-full bg-[url('/hero-bg.png')] bg-emerald-900 bg-no-repeat bg-cover bg-center flex justify-center items-end text-white font-bold text-6xl pb-4">
-        Artikel Kesehatan Puskesmas
+        Berita Puskesmas
       </div>
 
       <div className="container my-24 mx-auto md:px-6 ">
@@ -76,7 +76,7 @@ const recentArtikel = dataArtikel.slice(0, 3);
       
       
       
-    {dataArtikel.map((item) => (
+    {dataBerita.map((item) => (
     <div key={item.id_berita} className="mb-6">
     <div className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
       <div className="flex">

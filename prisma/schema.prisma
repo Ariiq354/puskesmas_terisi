@@ -6,12 +6,25 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
 }
 
 model User {
   id    Int     @id @default(autoincrement())
   email String  @unique
   name  String?
+}
+
+model tb_berita_artikel {
+  id_berita  Int      @id @default(autoincrement())
+  nama       String
+  path_image String
+  penulis    String
+  kategori   Int
+  deskripsi  String   @db.Text
+  konten     String   @db.LongText
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
 }
