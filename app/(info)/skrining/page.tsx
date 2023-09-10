@@ -44,7 +44,7 @@ export default function Skrining() {
             melalui nomor hotline berikut ini
           </p>
           <a href="https://api.whatsapp.com/send/?phone=6285171110351&text&type=phone_number&app_absent=0">
-            <Button className="flex group text-white py-5 px-2 font-bold bg-green-500 hover:bg-white hover:text-emerald-700 transition-all duration-300 px-4 lg:ml-4 mt-4 xl:mt-0">
+            <Button className="flex group text-white py-5 font-bold bg-green-500 hover:bg-white hover:text-emerald-700 transition-all duration-300 px-4 lg:ml-4 mt-4 xl:mt-0">
               <BsWhatsapp className="mr-2" />
               +62 851-7111-0351
             </Button>

@@ -45,6 +45,11 @@ export const NavLinks = [
         key: "Skrining Kesehatan Jiwa",
         title: "Skrining Kesehatan Jiwa",
       },
+      {
+        href: "/bpjs",
+        key: "Skrining BPJS Kesehatan",
+        title: "Skrining BPJS Kesehatan",
+      },
     ],
   },
   {
