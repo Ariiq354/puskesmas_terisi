@@ -1,10 +1,16 @@
 import Image from "next/image";
 
-import { FaFacebookF, FaInstagram, FaLocationDot } from "react-icons/fa6";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLocationDot,
+  FaYoutube,
+} from "react-icons/fa6";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { GrMail } from "react-icons/gr";
 
 import { pelayanan } from "@/constant";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -55,14 +61,30 @@ export default function Footer() {
         <div className="flex flex-col gap-5">
           <div className="font-bold text-2xl">Follow Us</div>
           <div className="text-emerald-700 flex flex-col gap-3">
-            <div className="flex gap-2 items-center">
-              <FaFacebookF />
-              Facebook
-            </div>
-            <div className="flex gap-2 items-center">
-              <FaInstagram />
-              Instagram
-            </div>
+            <Link href={"https://www.facebook.com/Gesit351/"} target="__blank">
+              <div className="flex gap-2 items-center">
+                <FaFacebookF />
+                Facebook
+              </div>
+            </Link>
+            <Link
+              href={"https://www.instagram.com/puskesmas_terisi/"}
+              target="__blank"
+            >
+              <div className="flex gap-2 items-center">
+                <FaInstagram />
+                Instagram
+              </div>
+            </Link>
+            <Link
+              href={"https://www.youtube.com/@puskesmasterisi6854"}
+              target="__blank"
+            >
+              <div className="flex gap-2 items-center">
+                <FaYoutube />
+                Youtube
+              </div>
+            </Link>
           </div>
         </div>
       </div>
