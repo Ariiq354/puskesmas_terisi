@@ -29,7 +29,7 @@ export default function Skrining() {
           </p>
         </div>
         <div className="flex w-full mt-2">
-          <Link href={"https://bit.ly/Deteksi_GME-IM"}>
+          <Link href={"https://bit.ly/Deteksi_GME-IM"} target="__blank">
             <Button className="flex group text-emerald-700 border-[3px] py-5 px-2 font-bold border-emerald-700 hover:bg-emerald-700 hover:text-white transition-all duration-300">
               Skrining Kesehatan Jiwa
               <BiChevronRight

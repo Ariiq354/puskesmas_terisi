@@ -27,6 +27,7 @@ export default function BPJS() {
             href={
               "https://webskrining.bpjs-kesehatan.go.id/skrining/index.html"
             }
+            target="__blank"
           >
             <Button className="flex group text-emerald-700 border-[3px] py-5 px-2 font-bold border-emerald-700 hover:bg-emerald-700 hover:text-white transition-all duration-300">
               Skrining BPJS Kesehatan

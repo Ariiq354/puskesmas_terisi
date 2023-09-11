@@ -13,7 +13,6 @@ import {
   FaShieldVirus,
 } from "react-icons/fa";
 import { TbBabyCarriage } from "react-icons/tb";
-import { GrBaby } from "react-icons/gr";
 
 export const NavLinks = [
   { href: "/", key: "Beranda", title: "Beranda" },

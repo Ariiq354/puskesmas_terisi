@@ -1,76 +1,31 @@
-"use client";
-
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
-import { CldImage } from "next-cloudinary";
-import axios from "axios";
 
-interface berita {
-  id_berita: number;
-  nama: string;
-  path_image: string;
-  penulis: string;
-  kategori: number;
-  deskripsi: string;
-  konten: string;
-  created_at: Date;
-  updated_at: Date;
-}
+import { formatDateToDDMMYYYY } from "@/lib/utils";
+import prismadb from "@/lib/prismadb";
+import Image from "next/image";
 
-export default function Berita() {
-  const [dataBerita, setDataBerita] = useState<berita[]>();
-  const [dataArtikel, setDataArtikel] = useState<berita[]>();
-
-  useEffect(() => {
-    axios.get("/api/berita").then((res) => {
-      setDataBerita(res.data);
-    });
-
-    axios.get("/api/artikel").then((res) => {
-      setDataArtikel(res.data);
-    });
-  }, []);
-
-  function formatDateToDDMMYYYY(dateString: string | number | Date) {
-    const date = new Date(dateString);
-    const day = String(date.getDate()).padStart(2, "0");
-    const month = String(date.getMonth() + 1).padStart(2, "0");
-    const year = date.getFullYear();
-    return `${day}/${month}/${year}`;
-  }
-
-  // Sort the dataBerita array by the 'created_at' date in descending order (most recent first)
-  dataBerita?.sort((a, b) => {
-    const dateA = new Date(a.created_at);
-    const dateB = new Date(b.created_at);
-
-    // Check if dateA and dateB are valid Date objects
-    if (isNaN(dateA.getTime()) || isNaN(dateB.getTime())) {
-      // Handle invalid dates here or skip items with invalid dates
-      return 0; // No change in order
-    }
-
-    return dateB.getTime() - dateA.getTime(); // Sort in descending order
+export default async function Berita() {
+  const dataBerita = await prismadb.tb_berita_artikel.findMany({
+    where: {
+      kategori: 0,
+    },
+    orderBy: {
+      created_at: "desc",
+    },
   });
 
-  // Slice the first 3 items to get the most recent ones
+  const dataArtikel = await prismadb.tb_berita_artikel.findMany({
+    where: {
+      kategori: 1,
+    },
+    orderBy: {
+      created_at: "desc",
+    },
+  });
+
   const recentBerita = dataBerita?.slice(0, 3);
 
-  // Sort the dataBerita array by the 'created_at' date in descending order (most recent first)
-  dataArtikel?.sort((a, b) => {
-    const dateA = new Date(a.created_at);
-    const dateB = new Date(b.created_at);
-
-    // Check if dateA and dateB are valid Date objects
-    if (isNaN(dateA.getTime()) || isNaN(dateB.getTime())) {
-      // Handle invalid dates here or skip items with invalid dates
-      return 0; // No change in order
-    }
-
-    return dateB.getTime() - dateA.getTime(); // Sort in descending order
-  });
-
-  // Slice the first 3 items to get the most recent ones
   const recentArtikel = dataArtikel?.slice(0, 3);
 
   return (
@@ -91,7 +46,7 @@ export default function Berita() {
                   <div className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
                     <div className="flex">
                       <div className="mx-4 -mt-4 overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20">
-                        <CldImage
+                        <Image
                           src={item.path_image}
                           width={500}
                           height={500}
@@ -137,7 +92,7 @@ export default function Berita() {
                   className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 mb-8 mx-4"
                 >
                   <div>
-                    <CldImage
+                    <Image
                       src={item.path_image}
                       width={500}
                       height={500}
@@ -172,7 +127,7 @@ export default function Berita() {
                   className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 mb-8 mx-4"
                 >
                   <div>
-                    <CldImage
+                    <Image
                       src={item.path_image}
                       width={500}
                       height={500}

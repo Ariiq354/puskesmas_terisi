@@ -1,41 +1,16 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
-import { CldImage } from "next-cloudinary";
-import { FaCalendar, FaUserAlt } from "react-icons/fa";
-import { Button } from "@/components/ui/button";
-import { BiChevronRight } from "react-icons/bi";
-import axios from "axios";
 import Link from "next/link";
 
-interface berita {
-  id_berita: number;
-  nama: string;
-  path_image: string;
-  penulis: string;
-  kategori: number;
-  deskripsi: string;
-  konten: string;
-  created_at: Date;
-  updated_at: Date;
-}
+import { Button } from "@/components/ui/button";
+import { formatDateToDDMMYYYY } from "@/lib/utils";
 
-function formatDateToDDMMYYYY(dateString: string | number | Date) {
-  const date = new Date(dateString);
-  const day = String(date.getDate()).padStart(2, "0");
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const year = date.getFullYear();
-  return `${day}/${month}/${year}`;
-}
+import { FaCalendar, FaUserAlt } from "react-icons/fa";
+import { BiChevronRight } from "react-icons/bi";
+import prismadb from "@/lib/prismadb";
+import Image from "next/image";
 
-export default function Artikel() {
-  const [data, setData] = useState<berita[]>();
-
-  useEffect(() => {
-    axios.get("/api/allBerita").then((res) => {
-      setData(res.data);
-    });
-  }, []);
+export default async function Artikel() {
+  const data = await prismadb.tb_berita_artikel.findMany();
 
   return (
     <div className="container mb-8">
@@ -49,7 +24,7 @@ export default function Artikel() {
             className="flex flex-col gap-2 border-4 border-emerald-600 items-center bg-white shadow-md p-6  text-emerald-700"
           >
             <div className="w-full">
-              <CldImage
+              <Image
                 src={item.path_image}
                 width={500}
                 height={500}

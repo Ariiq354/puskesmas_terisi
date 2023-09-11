@@ -4,15 +4,7 @@ import React, { useState, useEffect } from "react";
 import Part from "./part";
 import axios from "axios";
 import { Button } from "@/components/ui/button";
-
-interface galeri {
-  id: number;
-  code: string;
-  name: string;
-  type: number;
-  created_at: Date;
-  updated_at: Date;
-}
+import type { tb_galeri as galeri } from "@prisma/client";
 
 export default function Galeri() {
   const [items, setItems] = useState<galeri[]>();
