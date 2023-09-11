@@ -40,7 +40,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="bg-emerald-700">
+    <div className="bg-emerald-400">
       <div
         ref={nav}
         className="py-6 hidden text-white font-bold tracking-widest z-10"

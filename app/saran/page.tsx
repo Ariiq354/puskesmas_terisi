@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import toast, { Toaster } from "react-hot-toast";
 
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -25,22 +26,25 @@ export default function Saran() {
         (result) => {
           console.log(result.text);
           e.target.reset();
+          toast.success("Pesan Berhasil Dikirim");
         },
         (error) => {
           console.log(error.text);
+          toast.error("Pesan Gagal Terkirim, Hubungi Admin");
         }
       );
   };
   return (
     <>
-      <div className="h-[15rem] w-full bg-[url('/hero-bg.png')] bg-emerald-900 bg-no-repeat bg-cover bg-center flex justify-center items-end text-white font-bold text-6xl pb-4">
+      <Toaster />
+      <div className="h-[15rem] w-full bg-[url('/hero-bg.png')] bg-emerald-500 bg-no-repeat bg-cover bg-center flex justify-center items-end text-white font-bold text-6xl pb-4">
         Saran dan Keluhan
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center gap-4 container">
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="bg-emerald-900 w-full max-w-4xl flex flex-col justify-center gap-4 my-4 rounded-md p-8"
+          className="bg-emerald-700 w-full max-w-xl flex flex-col justify-center gap-4 my-4 rounded-md p-8"
         >
           <div className="grid w-full items-center gap-1.5">
             <Label htmlFor="name" className="text-white font-bold">
@@ -71,6 +75,13 @@ export default function Saran() {
             Kirim
           </Button>
         </form>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.2901198948684!2d108.15199660978666!3d-6.484895863374659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6ec95b2b6de7a3%3A0xc40f4ec4fd9612cf!2sPuskesmas%20Terisi!5e0!3m2!1sen!2sid!4v1694432838179!5m2!1sen!2sid"
+          width="600"
+          height="450"
+          loading="lazy"
+          className="my-4 border-4 border-emerald-700"
+        ></iframe>
       </div>
       <div className="flex justify-center my-4">
         <iframe

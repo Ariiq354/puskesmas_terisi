@@ -33,7 +33,7 @@ export default function Galeri() {
 
   return (
     <>
-      <div className="h-[15rem] w-full bg-[url('/hero-bg.png')] bg-emerald-900 bg-no-repeat bg-cover bg-center flex justify-center items-end text-white font-bold text-6xl pb-4">
+      <div className="h-[15rem] w-full bg-[url('/hero-bg.png')] bg-emerald-500 bg-no-repeat bg-cover bg-center flex justify-center items-end text-white font-bold text-6xl pb-4">
         Galeri Puskesmas
       </div>
       <div className="flex justify-center my-4 gap-8">
