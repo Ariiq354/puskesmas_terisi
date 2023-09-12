@@ -1,9 +1,10 @@
 import React from "react";
 import Image from "next/image";
+import "./style.css";
 
 export default function Hero() {
   return (
-    <div className="h-[50rem] bg-[url('/gambar.jpeg')] bg-no-repeat bg-cover flex items-center text-white mb-[-5rem]">
+    <div className="h-[50rem] section_top bg-cover bg-center bg-no-repeat flex items-center text-white mb-[5rem] z-0">
       <div className="bg-transparent bg-gradient-to-r from-emerald-700 w-full h-full flex items-center">
         <div className="container grid md:grid-cols-2 grid-cols-1 items-center">
           <div className="flex flex-col gap-4">

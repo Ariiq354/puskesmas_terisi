@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Statistik />
+      {/* <Statistik /> */}
       <TentangKami />
       <Pelayanan />
       <Artikel />

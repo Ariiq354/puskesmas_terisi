@@ -44,7 +44,7 @@ export default function NavigationMenu({ href, title, subMenus }: Props) {
               opacity: isHovered ? 1 : 0,
             }}
             transition={{ duration: 0.3 }}
-            className="group-hover:block hidden absolute top-[3.75rem] w-56 bg-white rounded-md overflow-hidden shadow-md text-green-900 "
+            className="group-hover:block hidden absolute z-10 top-[3.75rem] w-56 bg-white rounded-md overflow-hidden shadow-md text-green-900 "
           >
             {subMenus.map((subMenu) => (
               <Link key={subMenu.key} href={subMenu.href}>
