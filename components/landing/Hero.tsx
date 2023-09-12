@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import "./style.css";
+import { AiFillPlayCircle } from "react-icons/ai";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -15,11 +17,24 @@ export default function Hero() {
             <div className="text-2xl text-justify">
               Portal informasi, Data, Edukasi dan Umpan balik Terisi
             </div>
-            <div>
-              Jam Pelayanan :<br />
-              Senin s/d Kamis : 7.30 - 13.30 <br />
-              Jum&apos;at : 7.30 - 11.00 <br />
-              Sabtu : 7.30 - 11.30
+            <div className="flex gap-8">
+              <div>
+                Jam Pelayanan :<br />
+                Senin s/d Kamis : 7.30 - 13.30 <br />
+                Jum&apos;at : 7.30 - 11.00 <br />
+                Sabtu : 7.30 - 11.30
+              </div>
+              <div className="flex gap-6 items-center md:flex-row flex-col justify-center">
+                <Link
+                  href={"https://www.youtube.com/@puskesmasterisi6854"}
+                  target="__blank"
+                >
+                  <div className="bg-emerald-500 border-white border-2 rounded-full p-1 text-white md:ml-6">
+                    <AiFillPlayCircle size={40} />
+                  </div>
+                </Link>
+                <div>Tonton Kami</div>
+              </div>
             </div>
           </div>
           {/* <div className="md:block hidden">
