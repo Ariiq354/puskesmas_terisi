@@ -3,7 +3,11 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import Navbar from "@/components/template/Navbar";
 import Footer from "@/components/template/Footer";
+<<<<<<< HEAD
 import { NavbarProvider } from "@/components/navbarProvider";
+=======
+import Banner from "@/components/template/Banner";
+>>>>>>> bc52eeb103b30de218007466bf37aefa156f8367
 
 const roboto = Roboto({
   weight: "400",
@@ -25,6 +29,7 @@ export default function RootLayout({
       <body className={roboto.className}>
         <NavbarProvider />
         {children}
+        <Banner />
         <Footer />
       </body>
     </html>

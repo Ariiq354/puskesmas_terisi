@@ -20,7 +20,7 @@ model tb_galeri {
   updated_at DateTime @updatedAt
 }
 
-model tb_berita_artikel {
+model tb_berita {
   id_berita  Int      @id @default(autoincrement())
   nama       String
   path_image String
