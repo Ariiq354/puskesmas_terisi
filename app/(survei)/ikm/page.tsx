@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { BiChevronRight } from "react-icons/bi";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Ikm() {
   return (
@@ -9,17 +10,9 @@ export default function Ikm() {
       <div className="h-[15rem] w-full bg-[url('/hero-bg.png')] bg-emerald-500 bg-no-repeat bg-cover bg-center flex justify-center items-center text-white font-bold text-6xl text-center">
         Survei Indeks Kepuasan Masyarakat (IKM)
       </div>
-      <div className="container flex items-center py-20">
+      <div className="container grid md:grid-cols-2 grid-cols-1 py-20">
         <div>
           <p className="text-xl text-justify py-7">
-            Pemerintah dan dunia usaha sangat membutuhkan informasi mengenai
-            unit pelayanan di instansi pemerintah secara berkala. Untuk itu,
-            Pemerintah menyajikan Indeks Kepuasan Masyarakat secara rutin, yang
-            diharapkan dapat memberikan gambaran tentang kualitas pelayanan di
-            instansi pemerintah kepada masyarakat. Indeks ini diperoleh dari
-            pandangan masyarakat yang terkumpul melalui Survei Kepuasan
-            Masyarakat Terhadap Unit Pelayanan Publik.
-            <br />
             <br />
             Survei ini bertujuan untuk menanyakan pendapat masyarakat mengenai
             pengalaman mereka dalam menerima pelayanan dari instansi pemerintah.
@@ -53,6 +46,9 @@ export default function Ikm() {
               </Button>
             </Link>
           </div>
+        </div>
+        <div className="flex justify-center">
+          <Image src="/survey-ikm.png" width={500} height={100} alt="Survey IKM" className="rounded-lg" />
         </div>
       </div>
     </>
