@@ -6,8 +6,8 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <div className="h-[50rem] section_top bg-cover bg-center bg-no-repeat flex items-center text-white mb-[5rem] z-0">
-      <div className="bg-transparent bg-gradient-to-r from-emerald-700 w-full h-full flex items-center">
+    <div className="h-[40rem] bg-cover bg-center bg-no-repeat flex items-center mb-[5rem] z-0">
+      <div className="w-full h-full flex items-center">
         <div className="container grid md:grid-cols-2 grid-cols-1 items-center">
           <div className="flex flex-col gap-4">
             <div className="before relative pl-20 text-lg">
@@ -37,9 +37,9 @@ export default function Hero() {
               </div>
             </div>
           </div>
-          {/* <div className="md:block hidden">
-            <Image src="/home-img.svg" width={2500} height={2500} alt=""></Image>
-          </div> */}
+          <div className="md:block hidden">
+            <Image src="/gif-image.gif" width={2500} height={2500} alt=""></Image>
+          </div>
         </div>
       </div>
     </div>
