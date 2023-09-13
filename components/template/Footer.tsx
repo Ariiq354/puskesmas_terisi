@@ -15,7 +15,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-emerald-300">
-      <div className="container grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4 py-8 border-b-2">
+      <div className="container grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 py-8 border-b-2">
         <div className="flex flex-col gap-4">
           <div className="flex justify-center">
             <Image src="/logo.png" width={100} height={100} alt="logo" />
@@ -26,9 +26,12 @@ export default function Footer() {
             Kode Pos 45262
           </div>
         </div>
-        <div className="flex flex-col gap-5">
-          <div className="font-bold text-2xl">Pelayanan</div>
-          <div className="text-emerald-700 flex flex-col gap-3">
+        <div className="flex flex-col grid-rows-7 col-span-3 gap-5">
+          <div className="font-bold text-2xl row-span-1">Pelayanan</div>
+          <div
+            className="text-emerald-700 flex-col grid grid-rows-6
+					grid-flow-col gap-3 auto-cols-auto"
+          >
             {pelayanan.map((pel, index) => (
               <div key={index} className="flex gap-2 items-center">
                 {pel.icon}
@@ -37,7 +40,7 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 col-span-3">
           <div className="font-bold text-2xl">Info Kontak</div>
           <div className="text-emerald-700 flex flex-col gap-3">
             <div className="flex gap-2 items-center">
