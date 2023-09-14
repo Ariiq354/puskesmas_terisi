@@ -8,14 +8,14 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 export default function Hero() {
   return (
     <>
-      <div className="h-[40rem] bg-cover bg-center bg-no-repeat flex items-center mb-[5rem] z-0 mt-28 lg:mt-0">
-        <div className="w-full h-full flex items-center">
+      <div className="h-[40rem] flex items-center mb-[5rem] z-0 mt-28 lg:mt-0">
+        <div className="w-full h-full bg-gradient-to-b bg-transparent from-emerald-300 flex items-center">
           <div className="container grid md:grid-cols-2 grid-cols-1 items-center">
             <div className="flex flex-col gap-4">
-              <div className="text-2xl text-emerald-400">
-                SELAMAT DATANG DI
+              <div className="text-2xl text-emerald-700">SELAMAT DATANG DI</div>
+              <div className="text-4xl lg:text-6xl text-emerald-700">
+                UPTD PUSKESMAS TERISI
               </div>
-              <div className="text-4xl lg:text-6xl text-emerald-400">UPTD PUSKESMAS TERISI</div>
               <div className="text-2xl text-justify">
                 Portal informasi, Data, Edukasi dan Umpan balik Terisi
               </div>
@@ -62,7 +62,12 @@ export default function Hero() {
               </div>
             </div>
             <div className="mt-3 lg:mt-0">
-              <Image src="/gif-image.gif" width={2500} height={2500} alt=""></Image>
+              <Image
+                src="/test-gif.gif"
+                width={2500}
+                height={2500}
+                alt=""
+              ></Image>
             </div>
           </div>
         </div>

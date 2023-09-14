@@ -9,8 +9,13 @@ import { BiChevronRight } from "react-icons/bi";
 import prismadb from "@/lib/prismadb";
 import Image from "next/image";
 
+export const dynamic = "force-dynamic";
+
 export default async function Artikel() {
-  const data = await prismadb.tb_berita_artikel.findMany();
+  const data = await prismadb.tb_berita_artikel.findMany({
+    orderBy: { created_at: "desc" },
+    take: 3,
+  });
 
   return (
     <div className="container mb-8">

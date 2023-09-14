@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <div className="text-5xl bg-white">
+    <div className="text-5xl bg-emerald-100">
       <div className="flex flex-wrap">
         <div className="mx-4 w-full">
           <div className="w">
@@ -10,7 +10,7 @@ const Banner = () => {
               <div className="mr-10 my-5 max-w-[140px]">
                 <a href="#" target="_blank" rel="nofollow noopner">
                   <Image
-                    src="/logo-indramayu.png"
+                    src="/logoIndramayu.png"
                     alt=""
                     className=""
                     width={100}
@@ -21,7 +21,7 @@ const Banner = () => {
               <div className="mr-0 md:mr-10 my-5 max-w-[140px]">
                 <a href="#" target="_blank" rel="nofollow noopner">
                   <Image
-                    src="/logo-jabar.png"
+                    src="/logoJabar.png"
                     alt=""
                     className=""
                     width={100}
@@ -32,7 +32,7 @@ const Banner = () => {
               <div className="mr-10 my-5 max-w-[140px]">
                 <a href="#" target="_blank" rel="nofollow noopner">
                   <Image
-                    src="/logo-kemenkes.png"
+                    src="/logoKemenkes.png"
                     alt=""
                     className=""
                     width={100}
