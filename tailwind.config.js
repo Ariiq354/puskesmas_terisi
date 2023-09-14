@@ -7,6 +7,7 @@ module.exports = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
+  safelist: ["pl-12", "list-disc"],
   theme: {
     container: {
       center: true,

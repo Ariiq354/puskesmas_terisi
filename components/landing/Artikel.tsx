@@ -45,8 +45,10 @@ export default async function Artikel() {
                 <FaUserAlt /> {item.penulis}
               </div>
             </div>
-            <div className="font-bold text-3xl w-full my-2">{item.nama}</div>
-            <div className="text-justify">{item.deskripsi}</div>
+            <div className="font-bold text-3xl w-full my-2 cutoffNama">
+              {item.nama}
+            </div>
+            <div className="text-justify cutoff">{item.deskripsi}</div>
             <div className="flex w-full mt-2">
               <Link href={`/berita/${item.id_berita}`}>
                 <Button className="flex group text-emerald-700 border-[3px] py-5 px-2 font-bold border-emerald-700 hover:bg-emerald-700 hover:text-white transition-all duration-300">

@@ -93,10 +93,12 @@ export default function Galeri() {
           />
         ))}
       </div>
-      <div className="flex justify-center w-full">
+      <div className="flex justify-center w-full mb-4">
         <Button
           className="text-emerald-700 rounded-none border-l-[1px] border-y-[1px] p-3 font-bold border-emerald-300 hover:bg-emerald-300 hover:text-white transition-all duration-300  disabled:opacity-100"
-          onClick={handlePreviousPage}
+          onClick={() => {
+            handlePreviousPage();
+          }}
           disabled={currentPage === 1}
         >
           <BsChevronLeft />
@@ -108,7 +110,9 @@ export default function Galeri() {
               className="text-emerald-700 border-l-[1px] rounded-none border-y-[1px] font-bold border-emerald-300 hover:bg-emerald-300 hover:text-white transition-all duration-300 disabled:bg-emerald-300 disabled:text-white disabled:opacity-100"
               key={i}
               disabled={currentPage === i + 1}
-              onClick={() => handlePageChange(i + 1)}
+              onClick={() => {
+                handlePageChange(i + 1);
+              }}
             >
               {i + 1}
             </Button>
@@ -116,7 +120,9 @@ export default function Galeri() {
         )}
         <Button
           className="text-emerald-700 rounded-none border-[1px] p-3 font-bold border-emerald-300 hover:bg-emerald-300 hover:text-white transition-all duration-300 disabled:opacity-100"
-          onClick={handleNextPage}
+          onClick={() => {
+            handleNextPage();
+          }}
           disabled={currentPage === Math.ceil(items?.length! / itemsPerPage)}
         >
           <BsChevronRight />

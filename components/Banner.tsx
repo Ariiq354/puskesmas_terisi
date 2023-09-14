@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Banner = () => {
   return (
@@ -8,7 +9,11 @@ const Banner = () => {
           <div className="w">
             <div className="flex flex-wrap gap-12 items-center justify-center">
               <div className="mr-10 my-5 max-w-[140px]">
-                <a href="#" target="_blank" rel="nofollow noopner">
+                <Link
+                  href={"https://indramayukab.go.id/"}
+                  target="_blank"
+                  rel="nofollow noopner"
+                >
                   <Image
                     src="/logoIndramayu.png"
                     alt=""
@@ -16,10 +21,14 @@ const Banner = () => {
                     width={100}
                     height={100}
                   />
-                </a>
+                </Link>
               </div>
               <div className="mr-0 md:mr-10 my-5 max-w-[140px]">
-                <a href="#" target="_blank" rel="nofollow noopner">
+                <Link
+                  href={"https://jabarprov.go.id/"}
+                  target="_blank"
+                  rel="nofollow noopner"
+                >
                   <Image
                     src="/logoJabar.png"
                     alt=""
@@ -27,10 +36,14 @@ const Banner = () => {
                     width={100}
                     height={100}
                   />
-                </a>
+                </Link>
               </div>
               <div className="mr-10 my-5 max-w-[140px]">
-                <a href="#" target="_blank" rel="nofollow noopner">
+                <Link
+                  href={"https://www.kemkes.go.id/"}
+                  target="_blank"
+                  rel="nofollow noopner"
+                >
                   <Image
                     src="/logoKemenkes.png"
                     alt=""
@@ -38,10 +51,10 @@ const Banner = () => {
                     width={100}
                     height={100}
                   />
-                </a>
+                </Link>
               </div>
               <div className="mr-0 md:mr-10 my-5 max-w-[140px]">
-                <a href="#" target="_blank" rel="nofollow noopner">
+                <Link href={"/"} target="_blank" rel="nofollow noopner">
                   <Image
                     src="/logo.png"
                     alt=""
@@ -49,7 +62,7 @@ const Banner = () => {
                     width={100}
                     height={100}
                   />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
