@@ -46,6 +46,7 @@ export default function Navbar() {
         className="py-6 hidden text-white font-bold tracking-widest z-10"
       >
         <div className="flex container">
+          <Image src="/logo-indramayu.png" width={60} height={60} alt="logo" />
           <Image src="/logo.png" width={60} height={60} alt="logo" />
           <div className="w-full items-center justify-center lg:flex hidden">
             <div className="flex gap-12 text-md items h-full">
@@ -99,6 +100,7 @@ export default function Navbar() {
       </div>
       <div className="py-6 text-white font-bold tracking-widest">
         <div className="flex container">
+          <Image src="/logo-indramayu.png" width={60} height={60} alt="logo" />
           <Image src="/logo.png" width={60} height={60} alt="logo" />
           <div className="w-full items-center justify-center lg:flex hidden">
             <div className="flex gap-12 text-md items h-full">

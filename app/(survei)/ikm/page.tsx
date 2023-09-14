@@ -7,11 +7,11 @@ import Image from "next/image";
 export default function Ikm() {
   return (
     <>
-      <div className="h-[15rem] w-full bg-[url('/hero-bg.png')] bg-emerald-500 bg-no-repeat bg-cover bg-center flex justify-center items-center text-white font-bold text-6xl text-center">
+      <div className="h-[15rem] w-full bg-[url('/hero-bg.png')] bg-emerald-500 bg-no-repeat bg-cover bg-center flex justify-center items-center text-white font-bold text-4xl lg:text-6xl text-center">
         Survei Indeks Kepuasan Masyarakat (IKM)
       </div>
-      <div className="container grid md:grid-cols-2 grid-cols-1 py-20">
-        <div>
+      <div className="container grid lg:grid-cols-2 grid-cols-1 py-20">
+        <div className="order-2 lg:order-1">
           <p className="text-xl text-justify py-7">
             <br />
             Survei ini bertujuan untuk menanyakan pendapat masyarakat mengenai
@@ -35,7 +35,7 @@ export default function Ikm() {
             Silahkan mengisi formulir survei dengan mengklik tautan yang telah
             disediakan. Terima kasih.
           </p>
-          <div className="flex w-full mt-2">
+          <div className="flex w-full mt-2 justify-center lg:justify-start">
             <Link href={"https://bit.ly/KuesionerSKM-IM"} target="__blank">
               <Button className="flex group text-emerald-700 border-[3px] py-5 px-2 font-bold border-emerald-700 hover:bg-emerald-700 hover:text-white transition-all duration-300">
                 Survei IKM Puskesmas Terisi
@@ -47,7 +47,7 @@ export default function Ikm() {
             </Link>
           </div>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center order-1 lg:order-2">
           <Image src="/survey-ikm.png" width={500} height={100} alt="Survey IKM" className="rounded-lg" />
         </div>
       </div>

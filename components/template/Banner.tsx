@@ -18,7 +18,7 @@ const Banner = () => {
                   />
                 </a>
               </div>
-              <div className="mr-10 my-5 max-w-[140px]">
+              <div className="mr-0 md:mr-10 my-5 max-w-[140px]">
                 <a href="#" target="_blank" rel="nofollow noopner">
                   <Image
                     src="/logo-jabar.png"
@@ -40,7 +40,7 @@ const Banner = () => {
                   />
                 </a>
               </div>
-              <div className="mr-10 my-5 max-w-[140px]">
+              <div className="mr-0 md:mr-10 my-5 max-w-[140px]">
                 <a href="#" target="_blank" rel="nofollow noopner">
                   <Image
                     src="/logo.png"

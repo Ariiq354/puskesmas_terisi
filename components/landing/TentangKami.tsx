@@ -36,7 +36,7 @@ export default function TentangKami() {
         </div>
       </div>
       <div>
-        <Image src="/about-img.svg" width={2500} height={2500} alt=""></Image>
+        <Image className="md:block hidden" src="/about-img.svg" width={2500} height={2500} alt=""></Image>
       </div>
     </div>
   );
