@@ -56,7 +56,7 @@ const Banner = () => {
               <div className="mr-0 md:mr-10 my-5 max-w-[140px]">
                 <Link href={"/"} target="_blank" rel="nofollow noopner">
                   <Image
-                    src="/logo.png"
+                    src="/logoPkm.png"
                     alt=""
                     className=""
                     width={100}

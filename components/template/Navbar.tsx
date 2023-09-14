@@ -101,7 +101,7 @@ export default function Navbar() {
       <div className="py-6 text-white font-bold tracking-widest">
         <div className="flex container">
           <Image src="/logoIndramayu.png" width={60} height={60} alt="logo" />
-          <Image src="/logo.png" width={60} height={60} alt="logo" />
+          <Image src="/logoPkm.png" width={60} height={60} alt="logo" />
           <div className="w-full items-center justify-center lg:flex hidden">
             <div className="flex gap-12 text-md items h-full">
               {NavLinks.map((link) =>
