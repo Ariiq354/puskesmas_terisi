@@ -3,6 +3,7 @@ import Image from "next/image";
 import "./style.css";
 import { AiFillPlayCircle } from "react-icons/ai";
 import Link from "next/link";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 export default function Hero() {
   return (
@@ -42,15 +43,21 @@ export default function Hero() {
                 Sabtu : 7.30 - 11.30
               </div> */}
                 <div className="flex gap-3 items-center md:flex-row flex-col justify-center">
-                  <Link
-                    href={"https://www.youtube.com/@puskesmasterisi6854"}
-                    target="__blank"
-                  >
-                    <div className="bg-emerald-500 border-white border-2 rounded-full p-1 text-white md:ml-6">
+                  <Dialog>
+                    <DialogTrigger className="bg-emerald-500 border-white border-2 rounded-full p-1 text-white md:ml-6">
                       <AiFillPlayCircle size={40} />
-                    </div>
-                  </Link>
-                  <div>Tonton Kami</div>
+                    </DialogTrigger>
+                    <div>Tonton Kami</div>
+                    <DialogContent className="w-[64vw] md:h-[36vw]">
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src="https://www.youtube.com/embed/9qQwK_KDH_0?si=Wl2Tbgmz_YOy3fTq"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      ></iframe>
+                    </DialogContent>
+                  </Dialog>
                 </div>
               </div>
             </div>
