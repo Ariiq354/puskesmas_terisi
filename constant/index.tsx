@@ -74,12 +74,12 @@ export const pelayanan = [
   {
     name: "Klinik Umum",
     icon: <BiClinic></BiClinic>,
-    jadwal: "Senin - Sabtu",
+    jadwal: "Senin s/d Sabtu",
   },
   {
     name: "Pelayanan Kesehatan Lansia",
     icon: <MdElderly></MdElderly>,
-    jadwal: "Senin - Sabtu",
+    jadwal: "Senin s/d Sabtu",
   },
   {
     name: "Kesehatan Gigi dan Mulut",
@@ -89,12 +89,12 @@ export const pelayanan = [
   {
     name: "Pelayanan Kesehatan Peduli Remaja (PKPR)",
     icon: <FaPeopleCarry></FaPeopleCarry>,
-    jadwal: "Senin - Sabtu",
+    jadwal: "Senin s/d Sabtu",
   },
   {
     name: "Manajemen Terpadu Balita Sakit",
     icon: <FaBaby></FaBaby>,
-    jadwal: "Senin - Sabtu",
+    jadwal: "Senin s/d Sabtu",
   },
   {
     name: "Kesehatan Ibu dan Anak (KIA) dan KB",
@@ -104,17 +104,17 @@ export const pelayanan = [
   {
     name: "Pelayanan USG",
     icon: <BsSoundwave></BsSoundwave>,
-    jadwal: "Kamis & Sabtu",
+    jadwal: "Kamis dan Sabtu",
   },
   {
     name: "Poli DOTS TBC",
     icon: <FaLungsVirus></FaLungsVirus>,
-    jadwal: "Senin - Selasa",
+    jadwal: "Senin s/d Selasa",
   },
   {
     name: "Pemeriksaan IMS / HIV",
     icon: <BsVirus></BsVirus>,
-    jadwal: "Senin - Selasa",
+    jadwal: "Senin s/d Selasa",
   },
   {
     name: "Laboratorium",
@@ -134,21 +134,21 @@ export const pelayanan = [
   {
     name: "Rawat Inap",
     icon: <FaBed></FaBed>,
-    jadwal: "Senin - Selasa",
+    jadwal: "Setiap Hari",
   },
   {
     name: "Konseling",
     icon: <FaUserMd></FaUserMd>,
-    jadwal: "Senin - Sabtu",
+    jadwal: "Senin s/d Sabtu",
   },
   {
     name: "Dokmaru (Dokter Masuk Rumah)",
     icon: <FaHome></FaHome>,
-    jadwal: "Senin - Selasa",
+    jadwal: "Senin s/d Selasa",
   },
   {
     name: "PDP HIV AIDS",
     icon: <FaShieldVirus></FaShieldVirus>,
-    jadwal: "Senin - Selasa",
+    jadwal: "Senin s/d Selasa",
   },
 ];
