@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function TentangKami() {
   return (
-    <div className="container grid md:grid-cols-2 grid-cols-1 items-center my-10">
+    <div className="container grid md:grid-cols-2 grid-cols-1 items-center my-10 lg:mt-48">
       <div className="flex flex-col gap-4">
         <div className="text-lg">Tentang Kami</div>
         <div className="text-4xl">UPTD Puskesmas Terisi</div>
@@ -36,7 +36,13 @@ export default function TentangKami() {
         </div>
       </div>
       <div>
-        <Image className="md:block hidden" src="/about-img.svg" width={2500} height={2500} alt=""></Image>
+        <Image
+          className="md:block hidden"
+          src="/about-img.svg"
+          width={2500}
+          height={2500}
+          alt=""
+        ></Image>
       </div>
     </div>
   );
