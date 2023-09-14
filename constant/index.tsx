@@ -109,12 +109,12 @@ export const pelayanan = [
   {
     name: "Poli DOTS TBC",
     icon: <FaLungsVirus></FaLungsVirus>,
-    jadwal: "Senin s/d Selasa",
+    jadwal: "Senin s/d Sabtu",
   },
   {
     name: "Pemeriksaan IMS / HIV",
     icon: <BsVirus></BsVirus>,
-    jadwal: "Senin s/d Selasa",
+    jadwal: "Senin s/d Sabtu",
   },
   {
     name: "Laboratorium",
@@ -144,11 +144,11 @@ export const pelayanan = [
   {
     name: "Dokmaru (Dokter Masuk Rumah)",
     icon: <FaHome></FaHome>,
-    jadwal: "Senin s/d Selasa",
+    jadwal: "Senin s/d Sabtu",
   },
   {
     name: "PDP HIV AIDS",
     icon: <FaShieldVirus></FaShieldVirus>,
-    jadwal: "Senin s/d Selasa",
+    jadwal: "Senin s/d Sabtu",
   },
 ];
