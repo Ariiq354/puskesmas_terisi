@@ -4,6 +4,8 @@ import { formatDateToDDMMYYYY } from "@/lib/utils";
 import prismadb from "@/lib/prismadb";
 import Image from "next/image";
 
+export const dynamic = "force-dynamic";
+
 export default async function Artikel() {
   const dataBerita = await prismadb.tb_berita_artikel.findMany({
     where: {
