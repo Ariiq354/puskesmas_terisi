@@ -18,7 +18,7 @@ export default function Footer() {
       <div className="container grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 py-8 border-b-2">
         <div className="flex flex-col gap-4">
           <div className="flex justify-center">
-            <Image src="/logo.png" width={100} height={100} alt="logo" />
+            <Image src="/logoPkm.png" width={100} height={100} alt="logo" />
           </div>
           <div className="font-bold text-center">UPTD PUSKESMAS TERISI</div>
           <div className="text-justify text-emerald-700">
