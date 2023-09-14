@@ -15,7 +15,7 @@ export default function Pelayanan() {
           >
             <div className="flex items-center text-6xl">{pel.icon}</div>
             <div className="flex flex-col justify-center">
-              <div>{pel.name}</div>
+              <div className="font-bold">{pel.name}</div>
               <div>{pel.jadwal}</div>
             </div>
           </div>

@@ -119,7 +119,7 @@ export const pelayanan = [
   {
     name: "Laboratorium",
     icon: <BiSolidReport></BiSolidReport>,
-    jadwal: "Senin, Selasa, Rabu, Jumat, Sabtu",
+    jadwal: "Senin, Selasa, Rabu, Jumat, Sabtu. Kamis buka di Pustu Karangasem",
   },
   {
     name: "Gawat Darurat",
