@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <>
       <div className="h-[40rem] flex items-center mb-[5rem] z-0 mt-28 lg:mt-0">
-        <div className="w-full h-full bg-gradient-to-b bg-transparent from-emerald-300 flex items-center">
+        <div className="w-full h-fullflex items-center">
           <div className="container grid md:grid-cols-2 grid-cols-1 items-center">
             <div className="flex flex-col gap-4">
               <div className="text-2xl text-emerald-700">SELAMAT DATANG DI</div>
