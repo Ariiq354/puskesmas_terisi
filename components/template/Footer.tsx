@@ -16,12 +16,12 @@ export default function Footer() {
   return (
     <footer className="bg-emerald-300">
       <div className="container grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 py-8 border-b-2">
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 md:col-span-2 lg:col-span-1">
           <div className="flex justify-center">
             <Image src="/logoPkm.png" width={100} height={100} alt="logo" />
           </div>
           <div className="font-bold text-center">UPTD PUSKESMAS TERISI</div>
-          <div className="text-justify text-emerald-700">
+          <div className="text-center text-emerald-700">
             Jln. Raya Rajasinga No. 72B Kecamatan Terisi, Kabupaten Indramayu,
             Kode Pos 45262
           </div>

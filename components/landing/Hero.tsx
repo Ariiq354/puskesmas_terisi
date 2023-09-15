@@ -30,10 +30,10 @@ export default function Hero() {
               </div>
               <div className="flex flex-wrap gap-2 md:justify-normal justify-center">
                 <div className="bg-emerald-400 text-white p-4 flex flex-col gap-4 rounded-lg items-center my-5 lg:my-0">
-                  <div className="text-sm lg:text-lg flex justify-between items-center">
-                    <div>Layanan Call Center 24 Jam</div>
-                    <div>
-                      <Link href="https://wa.me/6282118894770" target="_blank">
+                  <Link href="https://wa.me/6282118894770" target="_blank">
+                    <div className="text-sm lg:text-lg flex justify-between items-center">
+                      <div>Layanan Call Center 24 Jam</div>
+                      <div>
                         <Image
                           src="/whatsapp.png"
                           width={30}
@@ -41,9 +41,9 @@ export default function Hero() {
                           alt=""
                           className="ml-3"
                         />
-                      </Link>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 </div>
                 <div className="flex gap-3 items-center flex-row justify-center">
                   <Dialog>

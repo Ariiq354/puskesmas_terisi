@@ -10,7 +10,7 @@ export default function Ikm() {
       <div className="h-[15rem] w-full bg-[url('/hero-bg.png')] bg-emerald-500 bg-no-repeat bg-cover bg-center flex justify-center items-center text-white font-bold text-4xl lg:text-6xl text-center">
         Survei Indeks Kepuasan Masyarakat (IKM)
       </div>
-      <div className="container grid lg:grid-cols-2 grid-cols-1 py-20">
+      <div className="container grid lg:grid-cols-2 grid-cols-1 gap-4 py-20">
         <div className="order-2 lg:order-1">
           <p className="text-xl text-justify py-7">
             <br />
@@ -48,7 +48,13 @@ export default function Ikm() {
           </div>
         </div>
         <div className="flex justify-center order-1 lg:order-2">
-          <Image src="/survey-ikm.png" width={500} height={100} alt="Survey IKM" className="rounded-lg" />
+          <Image
+            src="/survey-ikm.png"
+            width={500}
+            height={100}
+            alt="Survey IKM"
+            className="rounded-lg"
+          />
         </div>
       </div>
     </>

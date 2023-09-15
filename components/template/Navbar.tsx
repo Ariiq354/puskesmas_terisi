@@ -7,6 +7,7 @@ import Image from "next/image";
 import { AiOutlineMenu } from "react-icons/ai";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetHeader,
   SheetTitle,
@@ -17,6 +18,14 @@ import { NavLinks } from "@/constant";
 import NavigationMenu from "./NavigationMenu";
 import NavigationMenuMobile from "./NavigationMenuMobile";
 import "./style.css";
+import Link from "next/link";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../ui/accordion";
+import { Item } from "@radix-ui/react-accordion";
 
 export default function Navbar() {
   const nav = useRef<HTMLDivElement | null>(null);

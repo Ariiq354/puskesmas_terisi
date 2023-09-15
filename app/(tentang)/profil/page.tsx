@@ -11,16 +11,16 @@ export default function Profil() {
         <Image alt="" src="/gambar.jpeg" width={1000} height={1000}></Image>
       </div>
       <div className="bg-emerald-200 w-full text-emerald-900 ">
-        <div className="container grid md:grid-cols-2 grid-cols-1 items-center py-10">
+        <div className="container grid md:grid-cols-2 grid-cols-1 gap-4 items-center py-10">
           <div className="flex flex-col items-center px-10 gap-2">
-            <div className="text-6xl font-bold">Visi</div>
-            <div className="text-xl">
-              INDRAMAYU BERMARTABAT “ Bersih, Religius, Maju, Adil, Makmur dan
+            <div className="text-6xl font-bold text-center">Visi</div>
+            <div className="text-xl text-center">
+              INDRAMAYU BERMARTABAT “Bersih, Religius, Maju, Adil, Makmur dan
               Hebat”
             </div>
           </div>
           <div className="flex flex-col items-center pl-10 gap-2">
-            <div className="text-6xl font-bold">Misi</div>
+            <div className="text-6xl font-bold text-center">Misi</div>
             <div className="text-2xl font-semibold">
               “SAPTA NATA MULIA JAYA”
             </div>
