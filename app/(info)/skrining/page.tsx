@@ -40,20 +40,6 @@ export default function Skrining() {
           </Link>
         </div>
       </div>
-      <div className="py-20 w-full bg-emerald-500 h-[20rem] sm:h-[15rem] text-white text-[1.3rem] text-justify justify-center items-center flex flex-col xl:flex-row">
-        <div className="container w-full bg-emerald-500 h-[20rem] sm:h-[15rem] text-white text-[1.3rem] text-justify justify-center lg:items-center flex flex-col xl:flex-row">
-          <p>
-            Anda juga dapat berkonsultasi dengan petugas kesehatan jiwa kami
-            melalui nomor hotline berikut ini
-          </p>
-          <a href="https://api.whatsapp.com/send/?phone=6285171110351&text&type=phone_number&app_absent=0">
-            <Button className="flex group text-white py-5 font-bold bg-green-500 hover:bg-white hover:text-emerald-700 transition-all duration-300 px-4 lg:ml-4 mt-4 xl:mt-0">
-              <BsWhatsapp className="mr-2" />
-              +62 851-7111-0351
-            </Button>
-          </a>
-        </div>
-      </div>
     </>
   );
 }
