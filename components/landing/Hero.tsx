@@ -8,25 +8,27 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 export default function Hero() {
   return (
     <>
-      <div className="h-[40rem] flex items-center mb-[5rem] z-0 mt-28 lg:mt-0">
-        <div className="w-full h-full bg-gradient-to-b bg-transparent from-emerald-300 flex items-center">
+      <div className="md:h-[40rem]">
+        <div className="w-full h-full bg-gradient-to-b bg-transparent from-emerald-300 md:flex md:items-center">
           <div className="container grid md:grid-cols-2 grid-cols-1 items-center">
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 md:text-left text-center mt-8">
               <div className="text-lg text-emerald-900 font-bold">
                 SELAMAT DATANG DI
               </div>
-              <Image
-                src={"/singkatan.png"}
-                width={500}
-                height={500}
-                className="w-48"
-                alt=""
-              />
+              <div className="flex justify-center md:block">
+                <Image
+                  src={"/singkatan.png"}
+                  width={500}
+                  height={500}
+                  className="w-48"
+                  alt=""
+                />
+              </div>
               <div className="text-xl font-bold [text-shadow:_-10px_5px_10px_rgba(0,_0,_0,_0.35)]">
                 SITUS WEB DATA INFORMASI, EDUKASI DAN UMPAN BALIK PUSKESMAS
                 TERISI
               </div>
-              <div className="grid lg:grid-cols-2 grid-cols-1 gap-2">
+              <div className="flex flex-wrap gap-2 md:justify-normal justify-center">
                 <div className="bg-emerald-400 text-white p-4 flex flex-col gap-4 rounded-lg items-center my-5 lg:my-0">
                   <div className="text-sm lg:text-lg flex justify-between items-center">
                     <div>Layanan Call Center 24 Jam</div>
@@ -43,7 +45,7 @@ export default function Hero() {
                     </div>
                   </div>
                 </div>
-                <div className="flex gap-3 items-center md:flex-row flex-col justify-center">
+                <div className="flex gap-3 items-center flex-row justify-center">
                   <Dialog>
                     <DialogTrigger className="bg-emerald-500 border-white border-2 rounded-full p-1 text-white md:ml-6">
                       <AiFillPlayCircle size={40} />
@@ -62,7 +64,7 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-            <div className="mt-3 lg:mt-0">
+            <div>
               <Image
                 src="/test-gif.gif"
                 width={2500}
@@ -73,8 +75,8 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="relative container">
-        <div className="flex flex-col gap-4 mt-4 lg:absolute lg:translate-y-[-180px]">
+      <div className="container">
+        <div className="lg:absolute lg:translate-y-[-80px]">
           <div className="bg-emerald-400 text-white flex-col flex p-12 font-bold rounded-lg">
             <div className="font-bold mb-4 text-2xl">Jam Pelayanan</div>
             <div className="flex gap-1 justify-between border-white border-b-2 text-lg">

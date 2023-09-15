@@ -26,10 +26,10 @@ export default function Footer() {
             Kode Pos 45262
           </div>
         </div>
-        <div className="flex flex-col grid-rows-7 col-span-3 gap-5">
+        <div className="flex flex-col grid-rows-7 md:col-span-3 gap-5">
           <div className="font-bold text-2xl row-span-1">Pelayanan</div>
           <div
-            className="text-emerald-700 flex-col grid grid-rows-6
+            className="text-emerald-700 flex flex-col md:grid grid-rows-6
 					grid-flow-col gap-3 auto-cols-auto"
           >
             {pelayanan.map((pel, index) => (
@@ -40,7 +40,7 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col gap-5 col-span-3">
+        <div className="flex flex-col gap-5 md:col-span-3">
           <div className="font-bold text-2xl">Info Kontak</div>
           <div className="text-emerald-700 flex flex-col gap-3">
             <div className="flex gap-2 items-center">
