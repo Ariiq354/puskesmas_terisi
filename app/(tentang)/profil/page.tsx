@@ -104,9 +104,6 @@ export default function Profil() {
             </tbody>
           </table>
         </div>
-        <div className="md:col-span-2 col-span-1 flex justify-center">
-          <Image alt="" src="/penduduk.png" width={500} height={500}></Image>
-        </div>
       </div>
       <div className="flex flex-col p-10">
         <div className="md:col-span-2 col-span-1 text-emerald-900 text-5xl flex justify-center p-4 bg-emerald-200 my-10">
