@@ -1,6 +1,8 @@
 import prismadb from "@/lib/prismadb";
 import { Client } from "./components/client";
 
+export const revalidate = 0;
+
 export default async function Dashboard() {
   const data = await prismadb.user.findMany({
     select: {

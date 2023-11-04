@@ -1,6 +1,8 @@
 import prismadb from "@/lib/prismadb";
 import { UserForm } from "./components/user-form";
 
+export const revalidate = 0;
+
 const Dashboard = async ({ params }: { params: { userId: string } }) => {
   let userId = 0;
 
