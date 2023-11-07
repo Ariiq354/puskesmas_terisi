@@ -4,7 +4,6 @@ import { formatDateToDDMMYYYY } from "@/lib/utils";
 import prismadb from "@/lib/prismadb";
 import Image from "next/image";
 import RecentComponent from "@/components/RecentComponent";
-import { htmlContent } from "../../../api/contentrender.js"
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const data = await prismadb.tb_berita_artikel.findFirst({
@@ -12,8 +11,6 @@ export default async function Page({ params }: { params: { slug: string } }) {
       id_berita: parseInt(params.slug),
     },
   });
-  
-  const htmlContent = require('../../../api/contentrender.js')
 
   return (
     <>
@@ -35,8 +32,6 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
           {/* Content */}
           <div className="text-gray-600 py-2 text-justify pt-10">
-          {/* <div dangerouslySetInnerHTML={{__html: htmlContent
-          }} className="text-gray-600 py-2 text-justify pt-10"> */}
             <NewsContent data={data?.konten!} />
           </div>
         </div>
