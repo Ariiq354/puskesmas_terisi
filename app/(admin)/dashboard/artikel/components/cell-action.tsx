@@ -69,7 +69,7 @@ export const CellAction: React.FC<ArtikelColumnProps> = ({ data }) => {
           </DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuItem
-            onClick={() => router.push(`/dashboard/berita/${data.id_berita}`)}
+            onClick={() => router.push(`/dashboard/artikel/${data.id_berita}`)}
           >
             <Edit className="mr-2 h-4 w-4" /> Update
           </DropdownMenuItem>

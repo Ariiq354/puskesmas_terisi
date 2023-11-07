@@ -7,6 +7,7 @@ export default async function Dashboard() {
   const data = await prismadb.user.findMany({
     select: {
       id: true,
+      role: true,
       username: true,
       email: true,
     },

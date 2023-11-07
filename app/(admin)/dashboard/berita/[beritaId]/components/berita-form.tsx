@@ -69,7 +69,7 @@ export const BeritaForm: React.FC<BeritaFormProps> = ({ initialData }) => {
       if (initialData) {
         await axios.patch(`/api/berita`, {
           ...data,
-          id: initialData.id_berita,
+          id_berita: initialData.id_berita,
         });
       } else {
         await axios.post(`/api/berita`, { ...data, kategori: 0 });

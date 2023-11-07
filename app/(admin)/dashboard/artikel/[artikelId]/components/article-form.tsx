@@ -47,9 +47,9 @@ export const ArtikelForm: React.FC<ArtikelFormProps> = ({ initialData }) => {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const title = initialData ? "Edit News" : "Create News";
-  const description = initialData ? "Edit a News." : "Add a new News";
-  const toastMessage = initialData ? "News updated." : "News created.";
+  const title = initialData ? "Edit Article" : "Create Article";
+  const description = initialData ? "Edit a Article." : "Add a new Article";
+  const toastMessage = initialData ? "Article updated." : "Article created.";
   const action = initialData ? "Save changes" : "Create";
 
   const form = useForm<ArtikelFormValue>({
@@ -69,13 +69,13 @@ export const ArtikelForm: React.FC<ArtikelFormProps> = ({ initialData }) => {
       if (initialData) {
         await axios.patch(`/api/artikel`, {
           ...data,
-          id: initialData.id_berita,
+          id_berita: initialData.id_berita,
         });
       } else {
         await axios.post(`/api/artikel`, { ...data, kategori: 1 });
       }
       router.refresh();
-      router.push(`/dashboard/berita`);
+      router.push(`/dashboard/artikel`);
       toast.success(toastMessage);
     } catch (error: any) {
       toast.error("Something went wrong.");
@@ -149,7 +149,7 @@ export const ArtikelForm: React.FC<ArtikelFormProps> = ({ initialData }) => {
               <FormItem>
                 <FormLabel className="text-black">Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="Enter news name" {...field} />
+                  <Input placeholder="Enter article name" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -213,8 +213,8 @@ export const ArtikelForm: React.FC<ArtikelFormProps> = ({ initialData }) => {
                         "media",
                         "table",
                         "code",
-                        "help",
                         "wordcount",
+                        "help",
                       ],
                       toolbar:
                         "undo redo | blocks | " +

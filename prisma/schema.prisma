@@ -16,6 +16,7 @@ model User {
   username   String   @unique @db.String(255)
   email      String
   password   String
+  role       String   @default("0")
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
 }

@@ -20,6 +20,13 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -31,6 +38,7 @@ const formSchema = z.object({
     .min(3, { message: "Username must contain at least 3 character" })
     .max(255, { message: "Username max character reached" }),
   email: z.string().email(),
+  role: z.string(),
   password: z
     .string()
     .min(6, { message: "Password must contain at least 6 character" })
@@ -59,6 +67,7 @@ export const UserForm: React.FC<UserFormProps> = ({ initialData }) => {
     defaultValues: (initialData && {
       username: initialData.username,
       email: initialData.email,
+      role: initialData.role,
       password: "",
     }) || {
       username: "",
@@ -150,6 +159,30 @@ export const UserForm: React.FC<UserFormProps> = ({ initialData }) => {
                 <FormControl>
                   <Input placeholder="Enter your email" {...field} />
                 </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="role"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-black">Role</FormLabel>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <FormControl>
+                    <SelectTrigger className="w-[180px]">
+                      <SelectValue placeholder="Role" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="1">Admin</SelectItem>
+                    <SelectItem value="0">User</SelectItem>
+                  </SelectContent>
+                </Select>
                 <FormMessage />
               </FormItem>
             )}

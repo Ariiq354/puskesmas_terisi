@@ -11,6 +11,7 @@ export type UserColumn = {
   id: number;
   username: string;
   email: string;
+  role: string;
 };
 
 export const columns: ColumnDef<UserColumn>[] = [
@@ -54,6 +55,27 @@ export const columns: ColumnDef<UserColumn>[] = [
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       );
+    },
+  },
+  {
+    accessorKey: "role",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Role
+          <ArrowUpDown className="ml-2 h-4 w-4" />
+        </Button>
+      );
+    },
+    cell: ({ cell }) => {
+      if (cell.getValue() == 1) {
+        return <p>Admin</p>;
+      } else {
+        return <p>User</p>;
+      }
     },
   },
   {
