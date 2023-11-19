@@ -97,6 +97,7 @@ export const NavLinks = [
     ],
   },
   { href: "/saran", key: "Saran dan Keluhan", title: "Saran dan Keluhan" },
+  { href: "/login", key: "Log In", title: "Log In" },
 ];
 
 export const pelayanan = [
