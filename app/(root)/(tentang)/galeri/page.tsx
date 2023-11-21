@@ -124,7 +124,7 @@ export default function Galeri() {
         )}
         <Button
           variant={"outline"}
-          className="text-emerald-700 rounded-none border-[1px] p-3 font-bold border-emerald-300 hover:bg-emerald-300 hover:text-white transition-all duration-300 disabled:opacity-100"
+          className="text-emerald-700 rounded-none border-[1px]  p-3 font-bold border-emerald-300 hover:bg-emerald-300 hover:text-white transition-all duration-300 disabled:opacity-100"
           onClick={() => {
             handleNextPage();
           }}

@@ -30,13 +30,13 @@ export default function NavigationMenu({ href, title, subMenus }: Props) {
           className="flex items-center"
           target={href === "/login" ? "_blank" : undefined}
         >
-          <div className="hover:text-emerald-300 transition-all duration-300">
+          <div className="hover:text-emerald-800 transition-all duration-300">
             {title}
           </div>
         </Link>
       ) : (
         <div
-          className="group hover:text-emerald-300 transition-all duration-300 flex items-center gap-1 relative cursor-pointer"
+          className="group hover:text-emerald-800 transition-all duration-300 flex items-center gap-1 relative cursor-pointer"
           onMouseEnter={handleHover}
           onMouseLeave={handleHover}
         >
