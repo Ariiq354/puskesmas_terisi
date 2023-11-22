@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
@@ -23,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body className={roboto.className}>
+      <body className={cn(roboto.className, "grainy")}>
         <Toaster />
         {children}
       </body>
