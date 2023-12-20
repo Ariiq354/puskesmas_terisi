@@ -22,7 +22,6 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-tabs": "^1.0.4",
     "@splidejs/react-splide": "^0.7.12",
-    "@splidejs/splide": "^4.1.4",
     "@tanstack/react-table": "^8.10.7",
     "@tinymce/tinymce-react": "^4.3.0",
     "@types/node": "20.4.9",
