@@ -19,7 +19,9 @@ export default async function Artikel() {
 
   return (
     <div className="container mb-8">
-      <div className="text-bold text-center text-6xl mb-4">Artikel Terkini</div>
+      <div className="text-bold text-center text-6xl mb-4">
+        Berita & Artikel Terkini
+      </div>
       <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
         {data?.map((item) => (
           <div

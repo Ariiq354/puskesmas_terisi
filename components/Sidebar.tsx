@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 
 import { Menus } from "@/constant";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Sidebar() {
   const path = usePathname();
@@ -26,14 +27,15 @@ export default function Sidebar() {
           onClick={() => setOpen(!open)}
         />
         <div className="text-white flex gap-x-4 items-center text-xl font-bold uppercase">
-          <div>
-            <BiLogoGraphql
-              className={`text-purple-900 bg-blue-100 rounded-md cursor-pointer duration-300 ${
-                !open && "rotate-[360deg]"
-              }`}
-              size={40}
-            />
-          </div>
+          <Image
+            src={"/logoPkm.png"}
+            className={`text-purple-900 rounded-md cursor-pointer duration-300 w-10 ${
+              !open && "rotate-[360deg]"
+            }`}
+            alt="logo"
+            width={500}
+            height={500}
+          />
           <div className={`${!open && "scale-0"} duration-300`}>Dashboard</div>
         </div>
         <ul className="pt-6">

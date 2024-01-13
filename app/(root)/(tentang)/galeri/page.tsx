@@ -6,10 +6,17 @@ import axios from "axios";
 import { Button } from "@/components/ui/button";
 import type { tb_galeri as galeri } from "@prisma/client";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import { ViewModal } from "@/components/modal/view-modal";
+import Image from "next/image";
 
 export default function Galeri() {
   const [items, setItems] = useState<galeri[]>();
   const [state, setState] = useState(true);
+
+  const [viewOpenImage, setViewOpenImage] = useState(false);
+  const [foto, setFoto] = useState("");
+  const [deskripsi, setDeskripsi] = useState("");
+  const [title, setTitle] = useState("");
 
   useEffect(() => {
     axios.get("/api/galeri?type=1").then((res) => {
@@ -58,8 +65,23 @@ export default function Galeri() {
     }
   };
 
+  const onViewImage = (data: string, title: string, description: string) => {
+    setViewOpenImage(true);
+    setFoto(data);
+    setTitle(title);
+    setDeskripsi(description);
+  };
+
   return (
     <>
+      <ViewModal
+        title={title}
+        description={deskripsi}
+        isOpen={viewOpenImage}
+        onClose={() => setViewOpenImage(false)}
+      >
+        <Image src={foto} alt="foto" width={500} height={500} />
+      </ViewModal>
       <div className="h-[15rem] w-full bg-[url('/hero-bg.png')] bg-emerald-500 bg-no-repeat bg-cover bg-center flex justify-center items-center text-white font-bold text-4xl lg:text-6xl text-center">
         Galeri Puskesmas
       </div>
@@ -92,6 +114,8 @@ export default function Galeri() {
             code={item.code}
             name={item.name}
             type={item.type}
+            deskripsi={item.konten}
+            handleClick={onViewImage}
           />
         ))}
       </div>

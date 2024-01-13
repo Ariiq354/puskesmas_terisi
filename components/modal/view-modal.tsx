@@ -3,11 +3,10 @@
 import { useEffect, useState } from "react";
 
 import { Modal } from "@/components/ui/modal";
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
 
 interface ViewModalProps {
   title: string;
+  description?: string;
   isOpen: boolean;
   onClose: () => void;
   children: React.ReactNode;
@@ -18,6 +17,7 @@ export const ViewModal: React.FC<ViewModalProps> = ({
   isOpen,
   onClose,
   children,
+  description,
 }) => {
   const [isMounted, setIsMounted] = useState(false);
 
@@ -30,7 +30,12 @@ export const ViewModal: React.FC<ViewModalProps> = ({
   }
 
   return (
-    <Modal title={title} description="" isOpen={isOpen} onClose={onClose}>
+    <Modal
+      title={title}
+      description={description ? description : ""}
+      isOpen={isOpen}
+      onClose={onClose}
+    >
       <div className="pt-6 space-x-2 flex items-center justify-center w-full">
         {children}
       </div>

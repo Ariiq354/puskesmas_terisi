@@ -1,4 +1,4 @@
-import { BiClinic, BiSolidReport } from "react-icons/bi";
+import { BiClinic, BiMessageDetail, BiSolidReport } from "react-icons/bi";
 import { BsSoundwave, BsVirus } from "react-icons/bs";
 import { MdElderly, MdFamilyRestroom, MdReport } from "react-icons/md";
 import {
@@ -40,6 +40,11 @@ export const Menus = [
     title: "Article ",
     src: <ScrollText size={25} />,
     href: "/dashboard/artikel",
+  },
+  {
+    title: "Testimoni ",
+    src: <BiMessageDetail size={25} />,
+    href: "/dashboard/testimoni",
   },
 ];
 

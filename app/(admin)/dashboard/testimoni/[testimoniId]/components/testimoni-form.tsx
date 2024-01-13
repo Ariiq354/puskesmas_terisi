@@ -23,51 +23,59 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { AlertModal } from "@/components/modal/alert-modal";
-import VideoUpload from "@/components/ui/video-upload";
+import ImageUpload from "@/components/ui/image-upload";
+import { tb_galeri, tb_testimoni } from "@prisma/client";
+import { Textarea } from "@/components/ui/textarea";
 
 const formSchema = z.object({
-  code: z.string().min(1),
-  name: z.string().min(1),
+  path_image: z.string().min(1),
+  nama: z.string().min(1),
+  message: z.string().min(1),
 });
 
-type VideoFormValue = z.infer<typeof formSchema>;
+type TestimoniFormValue = z.infer<typeof formSchema>;
 
-interface VideoFormProps {
-  initialData: { id: number; code: string; name: string } | null;
+interface TestimoniFormProps {
+  initialData: tb_testimoni | null;
 }
 
-export const VideoForm: React.FC<VideoFormProps> = ({ initialData }) => {
+export const TestimoniForm: React.FC<TestimoniFormProps> = ({
+  initialData,
+}) => {
   const router = useRouter();
 
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const title = initialData ? "Edit Video" : "Create Video";
-  const description = initialData ? "Edit a Video." : "Add a new Video";
-  const toastMessage = initialData ? "Video updated." : "Video created.";
+  const title = initialData ? "Edit testimoni" : "Create testimoni";
+  const description = initialData ? "Edit a testimoni." : "Add a new testimoni";
+  const toastMessage = initialData
+    ? "testimoni updated."
+    : "testimoni created.";
   const action = initialData ? "Save changes" : "Create";
 
-  const form = useForm<VideoFormValue>({
+  const form = useForm<TestimoniFormValue>({
     resolver: zodResolver(formSchema),
     defaultValues: initialData || {
-      code: "",
-      name: "",
+      path_image: "",
+      nama: "",
+      message: "",
     },
   });
 
-  const onSubmit = async (data: VideoFormValue) => {
+  const onSubmit = async (data: TestimoniFormValue) => {
     try {
       setLoading(true);
       if (initialData) {
-        await axios.patch(`/api/video`, {
+        await axios.patch(`/api/testimoni`, {
           ...data,
-          id: initialData.id,
+          id_testimoni: initialData.id_testimoni,
         });
       } else {
-        await axios.post(`/api/video`, { ...data, type: 2 });
+        await axios.post(`/api/testimoni`, { ...data });
       }
-      router.push(`/dashboard/video`, undefined);
       router.refresh();
+      router.push(`/dashboard/testimoni`);
       toast.success(toastMessage);
     } catch (error: any) {
       toast.error("Something went wrong.");
@@ -79,9 +87,11 @@ export const VideoForm: React.FC<VideoFormProps> = ({ initialData }) => {
   const onDelete = async () => {
     try {
       setLoading(true);
-      await axios.delete(`/api/video`, { data: { id: initialData?.id } });
+      await axios.delete(`/api/testimoni`, {
+        data: { id_testimoni: initialData?.id_testimoni },
+      });
       router.refresh();
-      router.push(`/dashboard/video`);
+      router.push(`/dashboard/testimoni`);
       toast.success("Photo deleted.");
     } catch (error: any) {
       toast.error("Something went wrong");
@@ -117,15 +127,16 @@ export const VideoForm: React.FC<VideoFormProps> = ({ initialData }) => {
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <FormField
             control={form.control}
-            name="code"
+            name="path_image"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-black">Link</FormLabel>
                 <FormControl>
-                  <VideoUpload
-                    value={field.value ? field.value : ""}
+                  <ImageUpload
+                    value={field.value ? [field.value] : []}
+                    disabled={loading}
                     onChange={(url) => field.onChange(url)}
-                  ></VideoUpload>
+                    onRemove={() => field.onChange("")}
+                  ></ImageUpload>
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -133,12 +144,25 @@ export const VideoForm: React.FC<VideoFormProps> = ({ initialData }) => {
           />
           <FormField
             control={form.control}
-            name="name"
+            name="nama"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-black">Name</FormLabel>
+                <FormLabel className="text-black">Nama</FormLabel>
                 <FormControl>
-                  <Input placeholder="Enter photo name" {...field} />
+                  <Input placeholder="Enter name" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="message"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-black">Testimoni</FormLabel>
+                <FormControl>
+                  <Textarea placeholder="Enter testimoni" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>

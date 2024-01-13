@@ -6,6 +6,9 @@ export async function GET(request: Request) {
   const type = searchParams.get("type");
   const galeri = await prismadb.tb_galeri.findMany({
     where: { type: parseInt(type!) },
+    orderBy: {
+      created_at: "desc",
+    },
   });
   return NextResponse.json(galeri);
 }

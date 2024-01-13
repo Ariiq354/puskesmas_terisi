@@ -26,6 +26,7 @@ model tb_galeri {
   code       String
   name       String
   type       Int
+  konten     String  @default("")
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
 }
@@ -40,4 +41,13 @@ model tb_berita_artikel {
   konten     String
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
+}
+
+model tb_testimoni {
+  id_testimoni Int      @id @default(sequence())
+  nama         String
+  message      String
+  path_image   String
+  created_at   DateTime @default(now())
+  updated_at   DateTime @updatedAt
 }
