@@ -66,11 +66,10 @@ export default function Hero() {
             </div>
             <div>
               <Image
-                src="/test-gif.gif"
+                src="/test-gif.webp"
                 width={2500}
                 height={2500}
                 alt=""
-                unoptimized={true}
               ></Image>
             </div>
           </div>
