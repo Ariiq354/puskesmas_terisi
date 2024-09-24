@@ -4,11 +4,11 @@ import React from "react";
 export default function Profil() {
   return (
     <>
-      <div className="h-[15rem] w-full bg-[url('/hero-bg.png')] bg-emerald-500 bg-no-repeat bg-cover bg-center flex justify-center items-center text-white font-bold text-4xl lg:text-6xl text-center">
+      <div className="h-[15rem] w-full bg-[url('/hero-bg.webp')] bg-emerald-500 bg-no-repeat bg-cover bg-center flex justify-center items-center text-white font-bold text-4xl lg:text-6xl text-center">
         Profil Puskesmas
       </div>
       <div className="flex justify-center my-10">
-        <Image alt="" src="/gambar.jpeg" width={1000} height={1000}></Image>
+        <Image alt="" src="/gambar.webp" width={1000} height={1000}></Image>
       </div>
       <div className="bg-emerald-200 w-full text-emerald-900 ">
         <div className="container grid md:grid-cols-2 grid-cols-1 gap-4 items-center py-10">
@@ -62,14 +62,14 @@ export default function Profil() {
         </div>
       </div>
       <div className="container my-10">
-        <Image alt="" src="/tatanilai.png" width={1500} height={1500}></Image>
+        <Image alt="" src="/tatanilai.webp" width={1500} height={1500}></Image>
       </div>
       <div className="grid md:grid-cols-2 grid-cols-1 p-10">
         <div className="md:col-span-2 col-span-1 text-emerald-900 text-5xl flex justify-center p-4 bg-emerald-200 my-10">
           Wilayah Kerja
         </div>
         <div className="flex justify-center">
-          <Image alt="" src="/wilayah.png" width={300} height={300}></Image>
+          <Image alt="" src="/wilayah.webp" width={300} height={300}></Image>
         </div>
         <div className="text-xl">
           <p>
@@ -110,10 +110,10 @@ export default function Profil() {
           Struktur Organisasi
         </div>
         <div className="flex justify-center">
-          <Image alt="" src="/org1.png" width={1000} height={1000}></Image>
+          <Image alt="" src="/org1.webp" width={1000} height={1000}></Image>
         </div>
         <div className="flex justify-center">
-          <Image alt="" src="/org2.png" width={1000} height={1000}></Image>
+          <Image alt="" src="/org2.webp" width={1000} height={1000}></Image>
         </div>
       </div>
     </>

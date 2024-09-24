@@ -17,7 +17,7 @@ export default function Hero() {
               </div>
               <div className="flex justify-center md:block">
                 <Image
-                  src={"/singkatan.png"}
+                  src={"/singkatan.webp"}
                   width={500}
                   height={500}
                   className="w-48"
@@ -35,7 +35,7 @@ export default function Hero() {
                       <div>Layanan Call Center 24 Jam</div>
                       <div>
                         <Image
-                          src="/whatsapp.png"
+                          src="/whatsapp.webp"
                           width={30}
                           height={30}
                           alt=""

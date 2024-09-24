@@ -82,7 +82,7 @@ export default function Galeri() {
       >
         <Image src={foto} alt="foto" width={500} height={500} />
       </ViewModal>
-      <div className="h-[15rem] w-full bg-[url('/hero-bg.png')] bg-emerald-500 bg-no-repeat bg-cover bg-center flex justify-center items-center text-white font-bold text-4xl lg:text-6xl text-center">
+      <div className="h-[15rem] w-full bg-[url('/hero-bg.webp')] bg-emerald-500 bg-no-repeat bg-cover bg-center flex justify-center items-center text-white font-bold text-4xl lg:text-6xl text-center">
         Galeri Puskesmas
       </div>
       <div className="flex justify-center my-4 gap-4">

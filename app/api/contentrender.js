@@ -13,7 +13,7 @@ This is some **bold** and *italic* text.
 
 Here's a [link to a website](https://example.com).
 
-![An image](https://example.com/image.jpg)
+![An image](https://example.com/image.webp)
 `;
 
 const htmlContent = marked(markdownContent);

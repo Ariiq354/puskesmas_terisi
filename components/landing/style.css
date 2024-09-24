@@ -1,5 +1,5 @@
 .section_top {
-  background-image: url(/gambarCrop.jpg);
+  background-image: url(/gambarCrop.webp);
   animation: change 30s infinite ease-in-out;
   z-index: 0;
 }
@@ -7,24 +7,24 @@
 @keyframes change {
   0%,
   100% {
-    background-image: url(/gambarCrop.jpg);
+    background-image: url(/gambarCrop.webp);
     opacity: 1;
     z-index: 0;
   }
 
   25% {
-    background-image: url(/inov1.jpeg);
+    background-image: url(/inov1.webp);
     opacity: 1;
     z-index: 0;
   }
 
   50% {
-    background-image: url(/foto5.jpg);
+    background-image: url(/foto5.webp);
     opacity: 1;
     z-index: 0;
   }
   75% {
-    background-image: url(/inov2.jpeg);
+    background-image: url(/inov2.webp);
     opacity: 1;
     z-index: 0;
   }

@@ -28,7 +28,7 @@ export default function Sidebar() {
         />
         <div className="text-white flex gap-x-4 items-center text-xl font-bold uppercase">
           <Image
-            src={"/logoPkm.png"}
+            src={"/logoPkm.webp"}
             className={`text-purple-900 rounded-md cursor-pointer duration-300 w-10 ${
               !open && "rotate-[360deg]"
             }`}

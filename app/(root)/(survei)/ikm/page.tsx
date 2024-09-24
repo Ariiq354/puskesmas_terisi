@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Ikm() {
   return (
     <>
-      <div className="h-[15rem] w-full bg-[url('/hero-bg.png')] bg-emerald-500 bg-no-repeat bg-cover bg-center flex justify-center items-center text-white font-bold text-4xl lg:text-6xl text-center">
+      <div className="h-[15rem] w-full bg-[url('/hero-bg.webp')] bg-emerald-500 bg-no-repeat bg-cover bg-center flex justify-center items-center text-white font-bold text-4xl lg:text-6xl text-center">
         Survei Indeks Kepuasan Masyarakat (IKM)
       </div>
       <div className="container grid lg:grid-cols-2 grid-cols-1 gap-4 py-20">
@@ -52,7 +52,7 @@ export default function Ikm() {
         </div>
         <div className="flex justify-center order-1 lg:order-2">
           <Image
-            src="/survey-ikm.png"
+            src="/survey-ikm.webp"
             width={500}
             height={100}
             alt="Survey IKM"

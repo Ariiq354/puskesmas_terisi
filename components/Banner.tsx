@@ -5,7 +5,7 @@ import { EmblaCarousel } from "./EmblaCarousel";
 const Banner = () => {
   return (
     <div className="text-5xl bg-emerald-100">
-      <div className='grid grid-cols-12 gap-0'>
+      <div className="grid grid-cols-12 gap-0">
         <div className="col-start-3 col-span-8">
           <EmblaCarousel />
         </div>
@@ -20,7 +20,7 @@ const Banner = () => {
 		            <ul className="splide__list">
 			            <li className="splide__slide">
                   <Image
-                    src="/logoIndramayu.png"
+                    src="/logoIndramayu.webp"
                     alt=""
                     className=""
                     width={100}
@@ -29,7 +29,7 @@ const Banner = () => {
                   </li>
 			            <li className="splide__slide">
                   <Image
-                    src="/logoIndramayu.png"
+                    src="/logoIndramayu.webp"
                     alt=""
                     className=""
                     width={100}
@@ -38,7 +38,7 @@ const Banner = () => {
                   </li>
 			            <li className="splide__slide">
                   <Image
-                    src="/logoIndramayu.png"
+                    src="/logoIndramayu.webp"
                     alt=""
                     className=""
                     width={100}
@@ -74,7 +74,7 @@ export default Banner;
 //             rel="nofollow noopner"
 //             >
 //               <Image
-//               src="/logoIndramayu.png"
+//               src="/logoIndramayu.webp"
 //               alt=""
 //               className=""
 //               width={100}
@@ -89,7 +89,7 @@ export default Banner;
 //             rel="nofollow noopner"
 //             >
 //               <Image
-//               src="/logoJabar.png"
+//               src="/logoJabar.webp"
 //               alt=""
 //               className=""
 //               width={100}
@@ -104,7 +104,7 @@ export default Banner;
 //             rel="nofollow noopner"
 //             >
 //               <Image
-//               src="/logoKemenkes.png"
+//               src="/logoKemenkes.webp"
 //               alt=""
 //               className=""
 //               width={100}
@@ -119,7 +119,7 @@ export default Banner;
 //             rel="nofollow noopner"
 //             >
 //               <Image
-//               src="/logoPkm.png"
+//               src="/logoPkm.webp"
 //               alt=""
 //               className=""
 //               width={100}

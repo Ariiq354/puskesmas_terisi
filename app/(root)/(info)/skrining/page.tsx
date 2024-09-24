@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Skrining() {
   return (
     <>
-      <div className="h-[15rem] w-full bg-[url('/hero-bg.png')] bg-emerald-500 bg-no-repeat bg-cover bg-center flex justify-center items-center text-white font-bold text-4xl md:text-6xl text-center">
+      <div className="h-[15rem] w-full bg-[url('/hero-bg.webp')] bg-emerald-500 bg-no-repeat bg-cover bg-center flex justify-center items-center text-white font-bold text-4xl md:text-6xl text-center">
         Skrining Kesehatan Jiwa
       </div>
       <div className="container flex flex-col items-center  py-20">
